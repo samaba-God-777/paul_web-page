@@ -1,53 +1,32 @@
 {
   "goals": [
     {
-      "id": "laboratorios",
-      "label": "Nuevos Laboratorios",
-      "value": 2,
-      "icon": "🔬",
-      "suffix": ""
-    },
-    {
-      "id": "convenios",
-      "label": "Convenios Interinstitucionales",
-      "value": 5,
-      "icon": "🌐",
-      "suffix": "+"
-    },
-    {
-      "id": "investigacion",
-      "label": "Proyectos de Investigación",
-      "value": 6,
-      "icon": "📊",
-      "suffix": "+"
-    },
-    {
-      "id": "jornadas",
-      "label": "Jornadas Comunitarias",
+      "id": "personas",
+      "label": "Personas Beneficiadas",
       "value": 10,
-      "icon": "🤲",
-      "suffix": "+"
-    },
-    {
-      "id": "estudiantes",
-      "label": "Estudiantes Beneficiados",
-      "value": 20,
       "icon": "👥",
       "suffix": "+"
     },
     {
-      "id": "becas",
-      "label": "Becas Gestionadas",
-      "value": 15,
-      "icon": "🎯",
-      "suffix": "+"
+      "id": "comunidades",
+      "label": "Comunidades Atendidas",
+      "value": 6,
+      "icon": "🏘️",
+      "suffix": ""
     },
     {
-      "id": "talleres",
-      "label": "Talleres y Capacitaciones",
+      "id": "extension",
+      "label": "Proyectos de Extensión",
+      "value": 7,
+      "icon": "🌱",
+      "suffix": ""
+    },
+    {
+      "id": "voluntarios",
+      "label": "Voluntarios Activos",
       "value": 8,
-      "icon": "📚",
-      "suffix": "+"
+      "icon": "🤝",
+      "suffix": ""
     }
   ]
 }
