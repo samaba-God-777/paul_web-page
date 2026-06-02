@@ -1,23 +1,30 @@
 [
   {
     "id": 1,
-    "name": "María González",
-    "role": "Estudiante de Ingeniería",
-    "text": "La universidad ha transformado mi vida. Con este nuevo plan de gestión, sé que muchos más jóvenes del Darién tendrán acceso a una educación de calidad.",
+    "name": "Ana Cansari",
+    "role": "Presidenta del Centro de Estudiantes del CRU Darién\nEstudiante de Derecho y Ciencias Políticas",
+    "text": "Veo en Paul Córdoba un liderazgo que une el desarrollo como sociedad y académico de los estudiantes. Sus investigaciones reflejan el progreso del Darién y su impacto.",
     "avatar": ""
   },
   {
     "id": 2,
-    "name": "Carlos Mendoza",
-    "role": "Docente Investigador",
-    "text": "La visión de modernización e investigación aplicada que propone este plan es justo lo que necesitamos para llevar nuestra universidad al siguiente nivel.",
+    "name": "Jaryseth Rubídes",
+    "role": "Docente en ejercicio\nLicenciada en Educación Primaria",
+    "text": "Como estudiante egresada, deseo reconocer la gran labor del profesor Paul Córdoba y el profesor César Rujano, excelentes docentes que dejaron una huella positiva en mi formación académica. Por su compromiso, dedicación y calidad humana, considero que son profesionales que nuestro CRU Darién necesita para impulsar el cambio y el crecimiento institucional. Estoy segura de que con docentes como ellos podemos avanzar hacia nuevas oportunidades, como la apertura de maestrías, diplomados y programas que fortalezcan nuestra formación. Es momento de que nuestro CRU siga creciendo y brindando más oportunidades a todos los profesionales de Darién.",
     "avatar": ""
   },
   {
     "id": 3,
-    "name": "Ana Rodríguez",
-    "role": "Egresada y Profesional",
-    "text": "Como egresada, veo en esta propuesta el compromiso real de formar profesionales que contribuyan al desarrollo del Darién y del país.",
+    "name": "Miguel Nieto",
+    "role": "Estudiante Graduando de Trabajo Social",
+    "text": "Durante mi trayectoria como estudiante de trabajo social en la primera generación del Centro Regional Universitario de Darién, he tenido el privilegio de aprender de los profesores Paul Córdoba y César Rujano. Su enseñanza ha sido sumamente enriquecedora, ya que nos han brindado valiosas experiencias y conocimientos que han ampliado nuestra perspectiva en el campo. Las clases han sido muy interesantes y motivadoras, lo que me lleva a exhortar a todos mis compañeros a que les den la oportunidad de recibir su voto, apoyando así a la casilla #2.",
+    "avatar": ""
+  },
+  {
+    "id": 4,
+    "name": "Reinaldo Rodríguez",
+    "role": "Egresado de la Licenciatura en Inglés\nProfesor y Guía turístico autorizado",
+    "text": "Mi apoyo hacia el profesor Paul no comenzó ahora. Empezó desde aquella vez que entré a su salón de clases para estudiar Metodología de la Investigación. Es una persona dedicada y comprometida con el desarrollo estudiantil, la investigación y la transmisión de ese amor que siente por el progreso de nuestra provincia. Esto también se refleja en su libro, donde recopila valiosa información sobre la cultura ribereña y las tradiciones del pueblo de Darién. Su trabajo y compromiso son una muestra de su interés genuino por preservar nuestra identidad y contribuir al desarrollo de la región.",
     "avatar": ""
   }
 ]
