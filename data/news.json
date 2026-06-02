@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Lanzamiento del Plan de Gestión Universitaria 2026-2031",
+    "date": "2026-06-01",
+    "summary": "Presentación oficial del plan que guiará el desarrollo de nuestra universidad durante los próximos cinco años.",
+    "category": "institucional",
+    "page": "pages/noticias-institucional.html",
+    "image": "image/flyer_1.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Convocatoria Abierta para Mesas de Trabajo",
+    "date": "2026-06-15",
+    "summary": "Invitamos a toda la comunidad universitaria a participar en las mesas de trabajo para construir juntos el futuro.",
+    "category": "participacion",
+    "page": "pages/noticias-participacion.html",
+    "image": "image/flyer_2.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Primeros Convenios Internacionales en Proceso",
+    "date": "2026-07-01",
+    "summary": "Gestionamos alianzas estratégicas con universidades internacionales para fortalecer la movilidad académica.",
+    "category": "internacional",
+    "page": "pages/noticias-internacional.html",
+    "image": "image/flyer_1.jpeg"
+  }
+]

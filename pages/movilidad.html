@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movilidad y Desarrollo Profesional - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Movilidad y Desarrollo</h2>
+<a href="../index.html#axes">Ejes</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🌍</div>
+<h1>Movilidad y Desarrollo<br>Profesional</h1>
+<p>Oportunidades globales para estudiantes y docentes, formación continua y redes científicas internacionales</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🌍 ¿Qué es?</h3>
+<p>Este eje estratégico promueve la movilidad académica nacional e internacional, el intercambio de conocimientos, las pasantías profesionales, la capacitación continua del cuerpo docente y la creación de redes científicas que posicionen a la universidad en el ámbito global.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card fade-in">
+<h3>📋 Acciones Principales</h3>
+<ul>
+<li>Programas de intercambio académico nacional e internacional</li>
+<li>Pasantías profesionales en empresas e instituciones</li>
+<li>Redes científicas y colaboración interuniversitaria</li>
+<li>Formación y capacitación docente continua</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🎯 Objetivos</h3>
+<ul>
+<li>Ampliar horizontes académicos de estudiantes y docentes</li>
+<li>Fortalecer competencias profesionales mediante pasantías</li>
+<li>Crear redes de colaboración científica global</li>
+<li>Actualizar permanentemente al cuerpo docente</li>
+</ul>
+</div>
+
+</div>
+
+<div class="card fade-in">
+<h3>📊 Metas del Eje</h3>
+<div class="stat-grid">
+<div class="stat-card"><div class="num">25</div><div class="label">Convenios Internacionales</div></div>
+<div class="stat-card"><div class="num">200</div><div class="label">Estudiantes en Intercambio</div></div>
+<div class="stat-card"><div class="num">100</div><div class="label">Docentes Capacitados</div></div>
+<div class="stat-card"><div class="num">10</div><div class="label">Redes Científicas</div></div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

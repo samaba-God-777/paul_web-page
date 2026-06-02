@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compromiso Social - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Compromiso Social</h2>
+<a href="../index.html#values">Valores</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🤲</div>
+<h1>Compromiso Social</h1>
+<p>La universidad como motor de desarrollo y transformación del Darién</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🤲 ¿Qué significa el Compromiso Social para nosotros?</h3>
+<p>El compromiso social es la razón de ser de nuestra universidad. Nos debemos al Darién y a su gente. Cada acción de nuestra gestión está orientada a generar impacto positivo en el territorio, impulsando el desarrollo sostenible, la justicia social y la mejora de la calidad de vida de las comunidades.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card fade-in">
+<h3>🌱 Acciones Comunitarias</h3>
+<ul>
+<li>Programas de extensión universitaria en comunidades rurales</li>
+<li>Proyectos de desarrollo sostenible con impacto local</li>
+<li>Voluntariado estudiantil para el fortalecimiento comunitario</li>
+<li>Alianzas con organizaciones sociales y productivas</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🎯 Impacto Social</h3>
+<ul>
+<li>Formación de profesionales comprometidos con su territorio</li>
+<li>Investigación aplicada a la solución de problemas locales</li>
+<li>Transferencia de conocimiento y tecnología a la comunidad</li>
+<li>Impulso a la economía local y el emprendimiento</li>
+</ul>
+</div>
+
+</div>
+
+<div class="card fade-in">
+<h3>📊 Impacto en Cifras</h3>
+<div class="stat-grid">
+<div class="stat-card"><div class="num">+5000</div><div class="label">Personas Beneficiadas</div></div>
+<div class="stat-card"><div class="num">20</div><div class="label">Comunidades Atendidas</div></div>
+<div class="stat-card"><div class="num">15</div><div class="label">Proyectos de Extensión</div></div>
+<div class="stat-card"><div class="num">+200</div><div class="label">Voluntarios Activos</div></div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Participación - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Noticias de Participación</h2>
+<a href="../index.html#news">Noticias</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🗳️</div>
+<h1>Participación</h1>
+<p>Espacios de diálogo y construcción colectiva para el futuro universitario</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🗳️ Convocatoria Abierta para Mesas de Trabajo</h3>
+<p>Invitamos a toda la comunidad universitaria a participar en las mesas de trabajo para construir juntos el futuro de nuestra universidad. Estudiantes, docentes, administrativos y comunidad en general están llamados a ser parte activa de este proceso histórico.</p>
+</div>
+
+<div class="card fade-in">
+<h3>🤲 ¿Cómo participar?</h3>
+<ul>
+<li>Inscríbete en las mesas de trabajo de tu interés</li>
+<li>Asiste a las asambleas universitarias abiertas</li>
+<li>Participa en las encuestas digitales de opinión</li>
+<li>Contribuye con tus ideas y propuestas</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>📋 Calendario de Participación</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Actividad</th><th>Fecha</th><th>Lugar</th></tr></thead>
+<tbody>
+<tr><td>Mesa de Trabajo: Infraestructura</td><td>Julio 2026</td><td>Auditorio Central</td></tr>
+<tr><td>Mesa de Trabajo: Investigación</td><td>Agosto 2026</td><td>Salón de Sesiones</td></tr>
+<tr><td>Asamblea Universitaria</td><td>Septiembre 2026</td><td>Plaza Cívica</td></tr>
+<tr><td>Foro Abierto con la Comunidad</td><td>Octubre 2026</td><td>Casa de la Cultura</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<a href="../index.html#news" class="back-home">← Volver a noticias</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

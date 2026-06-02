@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vinculación e Investigación - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Vinculación e Investigación</h2>
+<a href="../index.html#axes">Ejes</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🌱</div>
+<h1>Vinculación e Investigación<br>con el Territorio</h1>
+<p>La universidad como motor de desarrollo local a través de la investigación aplicada y la extensión comunitaria</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🌱 ¿Qué es?</h3>
+<p>Este eje estratégico busca articular la academia con las necesidades reales del Darién, promoviendo programas de extensión comunitaria, investigación aplicada al territorio y prácticas profesionales que generen impacto directo en la calidad de vida de las comunidades.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card fade-in">
+<h3>📋 Acciones Principales</h3>
+<ul>
+<li>Programas de extensión comunitaria en zonas rurales</li>
+<li>Investigación aplicada a problemas del territorio</li>
+<li>Prácticas profesionales con impacto social</li>
+<li>Mesas de trabajo con actores comunitarios</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🎯 Objetivos</h3>
+<ul>
+<li>Fortalecer el vínculo universidad-comunidad</li>
+<li>Generar conocimiento útil para el desarrollo regional</li>
+<li>Formar profesionales con compromiso territorial</li>
+<li>Articular la academia con el sector productivo local</li>
+</ul>
+</div>
+
+</div>
+
+<div class="card fade-in">
+<h3>📊 Metas del Eje</h3>
+<div class="stat-grid">
+<div class="stat-card"><div class="num">20</div><div class="label">Comunidades Atendidas</div></div>
+<div class="stat-card"><div class="num">40+</div><div class="label">Proyectos de Investigación</div></div>
+<div class="stat-card"><div class="num">500</div><div class="label">Estudiantes en Prácticas</div></div>
+<div class="stat-card"><div class="num">15</div><div class="label">Mesas de Trabajo Activas</div></div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

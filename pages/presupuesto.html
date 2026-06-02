@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presupuesto - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Presupuesto</h2>
+<a href="../index.html#transparency">Transparencia</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">💰</div>
+<h1>Presupuesto</h1>
+<p>Distribución presupuestaria detallada por ejes estratégicos</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>📊 Distribución General del Presupuesto</h3>
+<p>El presupuesto total estimado para el Plan de Gestión Universitaria 2026-2031 se distribuye en cuatro ejes estratégicos, priorizando la infraestructura académica y la investigación aplicada al territorio.</p>
+<div style="margin-top:20px;">
+<div style="margin-bottom:15px;">
+<div class="progress-label"><span>Infraestructura e Innovación</span><span>35%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:35%"></div></div>
+</div>
+<div style="margin-bottom:15px;">
+<div class="progress-label"><span>Vinculación e Investigación</span><span>28%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:28%"></div></div>
+</div>
+<div style="margin-bottom:15px;">
+<div class="progress-label"><span>Movilidad y Desarrollo Profesional</span><span>22%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:22%"></div></div>
+</div>
+<div style="margin-bottom:15px;">
+<div class="progress-label"><span>Autogestión y Alianzas</span><span>15%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:15%"></div></div>
+</div>
+</div>
+</div>
+
+<div class="card fade-in">
+<h3>📋 Desglose Anual Estimado</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Año</th><th>Infraestructura</th><th>Investigación</th><th>Movilidad</th><th>Autogestión</th><th>Total</th></tr>
+</thead>
+<tbody>
+<tr><td>2026</td><td>$120,000</td><td>$80,000</td><td>$60,000</td><td>$40,000</td><td><strong>$300,000</strong></td></tr>
+<tr><td>2027</td><td>$180,000</td><td>$120,000</td><td>$80,000</td><td>$50,000</td><td><strong>$430,000</strong></td></tr>
+<tr><td>2028</td><td>$200,000</td><td>$140,000</td><td>$100,000</td><td>$60,000</td><td><strong>$500,000</strong></td></tr>
+<tr><td>2029</td><td>$220,000</td><td>$160,000</td><td>$120,000</td><td>$70,000</td><td><strong>$570,000</strong></td></tr>
+<tr><td>2030</td><td>$250,000</td><td>$180,000</td><td>$140,000</td><td>$80,000</td><td><strong>$650,000</strong></td></tr>
+<tr><td>2031</td><td>$280,000</td><td>$200,000</td><td>$160,000</td><td>$100,000</td><td><strong>$740,000</strong></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="grid-2">
+
+<div class="card fade-in">
+<h3>🏗️ Infraestructura e Innovación</h3>
+<p><strong>Inversión total:</strong> 35% del presupuesto</p>
+<ul>
+<li>Modernización de laboratorios</li>
+<li>Equipamiento tecnológico TIC</li>
+<li>Construcción de espacios inteligentes</li>
+<li>Mantenimiento de infraestructura existente</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🌱 Vinculación e Investigación</h3>
+<p><strong>Inversión total:</strong> 28% del presupuesto</p>
+<ul>
+<li>Fondos para investigación aplicada</li>
+<li>Programas de extensión comunitaria</li>
+<li>Becas de investigación estudiantil</li>
+<li>Publicaciones académicas</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🌍 Movilidad y Desarrollo</h3>
+<p><strong>Inversión total:</strong> 22% del presupuesto</p>
+<ul>
+<li>Pasantías nacionales e internacionales</li>
+<li>Intercambio académico</li>
+<li>Capacitación docente continua</li>
+<li>Redes científicas</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🤝 Autogestión y Alianzas</h3>
+<p><strong>Inversión total:</strong> 15% del presupuesto</p>
+<ul>
+<li>Proyectos autosostenibles</li>
+<li>Alianzas empresariales</li>
+<li>Cooperación internacional</li>
+<li>Educación continua</li>
+</ul>
+</div>
+
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

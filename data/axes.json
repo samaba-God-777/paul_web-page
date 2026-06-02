@@ -1,0 +1,50 @@
+[
+  {
+    "id": "vinculacion",
+    "title": "Vinculación e Investigación con el Territorio",
+    "icon": "🌱",
+    "page": "pages/vinculacion.html",
+    "items": [
+      "Extensión comunitaria",
+      "Investigación aplicada",
+      "Prácticas profesionales",
+      "Trabajo con comunidades"
+    ]
+  },
+  {
+    "id": "infraestructura",
+    "title": "Infraestructura, Innovación y Producción",
+    "icon": "🏗️",
+    "page": "pages/infraestructura.html",
+    "items": [
+      "Modernización de laboratorios",
+      "TIC educativas",
+      "Espacios inteligentes",
+      "Investigación aplicada"
+    ]
+  },
+  {
+    "id": "movilidad",
+    "title": "Movilidad y Desarrollo Profesional",
+    "icon": "🌍",
+    "page": "pages/movilidad.html",
+    "items": [
+      "Intercambios académicos",
+      "Pasantías internacionales",
+      "Redes científicas",
+      "Formación continua"
+    ]
+  },
+  {
+    "id": "autogestion",
+    "title": "Autogestión y Alianzas Estratégicas",
+    "icon": "🤝",
+    "page": "pages/autogestion.html",
+    "items": [
+      "Convenios institucionales",
+      "Proyectos sostenibles",
+      "Cooperación internacional",
+      "Vinculación empresarial"
+    ]
+  }
+]

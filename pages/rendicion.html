@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rendición de Cuentas - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Rendición de Cuentas</h2>
+<a href="../index.html#transparency">Transparencia</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">📊</div>
+<h1>Rendición de Cuentas</h1>
+<p>Informes periódicos de avance y ejecución del plan de gestión</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>📈 Compromiso con la Transparencia</h3>
+<p>La rendición de cuentas es un pilar fundamental de nuestra gestión. Creemos en la transparencia total como herramienta para fortalecer la confianza de la comunidad universitaria y la sociedad darienita. A continuación, presentamos los informes periódicos de avance y ejecución del plan.</p>
+</div>
+
+<div class="stat-grid">
+<div class="stat-card fade-in"><div class="num">90%</div><div class="label">Metas 2026 Cumplidas</div></div>
+<div class="stat-card fade-in"><div class="num">15</div><div class="label">Informes Publicados</div></div>
+<div class="stat-card fade-in"><div class="num">4</div><div class="label">Auditorías Realizadas</div></div>
+<div class="stat-card fade-in"><div class="num">100%</div><div class="label">Ejecución Presupuestal</div></div>
+</div>
+
+<div class="card fade-in">
+<h3>📄 Informes Trimestrales 2026</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Periodo</th><th>Avance</th><th>Ejecución</th><th>Observaciones</th></tr>
+</thead>
+<tbody>
+<tr><td>Q1 2026</td><td>22%</td><td>98%</td><td>Diagnóstico inicial completado</td></tr>
+<tr><td>Q2 2026</td><td>45%</td><td>95%</td><td>Mesas de trabajo instaladas</td></tr>
+<tr><td>Q3 2026</td><td>68%</td><td>100%</td><td>Convenios internacionales en proceso</td></tr>
+<tr><td>Q4 2026</td><td>90%</td><td>97%</td><td>Plan estratégico finalizado</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="grid-2">
+
+<div class="card fade-in">
+<h3>🔍 Auditorías</h3>
+<ul>
+<li><strong>Auditoría Interna:</strong> Procesos administrativos y financieros - abril 2026</li>
+<li><strong>Auditoría Externa:</strong> Cumplimiento de metas - julio 2026</li>
+<li><strong>Auditoría de Gestión:</strong> Evaluación de impacto - octubre 2026</li>
+<li><strong>Auditoría Ciudadana:</strong> Participación comunitaria - diciembre 2026</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>📢 Canales de Participación</h3>
+<ul>
+<li>Asambleas universitarias abiertas</li>
+<li>Plataforma digital de transparencia</li>
+<li>Buzón de sugerencias y denuncias</li>
+<li>Audiencias públicas trimestrales</li>
+<li>Informes accesibles para toda la comunidad</li>
+</ul>
+</div>
+
+</div>
+
+<div class="card fade-in">
+<h3>📊 Ejecución por Eje Estratégico</h3>
+<div style="margin-top:20px;">
+<div style="margin-bottom:15px;">
+<div class="progress-label"><span>Vinculación e Investigación</span><span>92%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:92%"></div></div>
+</div>
+<div style="margin-bottom:15px;">
+<div class="progress-label"><span>Infraestructura e Innovación</span><span>85%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
+</div>
+<div style="margin-bottom:15px;">
+<div class="progress-label"><span>Movilidad y Desarrollo</span><span>78%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:78%"></div></div>
+</div>
+<div style="margin-bottom:15px;">
+<div class="progress-label"><span>Autogestión y Alianzas</span><span>70%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:70%"></div></div>
+</div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

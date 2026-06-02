@@ -1,0 +1,32 @@
+[
+  {
+    "id": 4,
+    "src": "image/flyer_1.jpeg",
+    "alt": "Evento académico",
+    "category": "eventos"
+  },
+  {
+    "id": 5,
+    "src": "image/flyer_2.jpeg",
+    "alt": "Actividades universitarias",
+    "category": "eventos"
+  },
+  {
+    "id": 6,
+    "src": "image/WhatsApp%20Image%202026-06-01%20at%2010.36.14.jpeg",
+    "alt": "Comunidad universitaria",
+    "category": "comunidad"
+  },
+  {
+    "id": 7,
+    "src": "image/WhatsApp%20Image%202026-06-02%20at%2013.56.48.jpeg",
+    "alt": "Estudiantes en actividad",
+    "category": "estudiantes"
+  },
+  {
+    "id": 9,
+    "src": "image/flyer_2.jpeg",
+    "alt": "Conferencia institucional",
+    "category": "eventos"
+  }
+]

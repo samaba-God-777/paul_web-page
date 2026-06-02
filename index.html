@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan de Gestión Universitaria 2026-2031</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+<div class="loader-content">
+<div class="loader-spinner"></div>
+<h2>Plan de Gestión Universitaria</h2>
+<p>Cargando...</p>
+</div>
+</div>
+
+<div id="cursor-glow"></div>
+
+<nav id="navbar">
+<div class="nav-container">
+<a href="#" class="nav-logo">PGU <span>2026-2031</span></a>
+<div class="nav-links">
+<a href="#hero">Inicio</a>
+<a href="#candidates">Equipo</a>
+<a href="#vision">Visión</a>
+<a href="#axes">Ejes</a>
+<a href="#timeline">Ruta</a>
+<a href="#dashboard">Metas</a>
+<a href="#testimonials">Testimonios</a>
+<a href="#news">Noticias</a>
+<a href="#transparency">Transparencia</a>
+</div>
+<div class="nav-actions">
+<button id="authBtn" class="nav-icon-btn" aria-label="Iniciar sesión">👤</button>
+<button id="darkToggle" class="nav-icon-btn" aria-label="Modo oscuro">🌙</button>
+<button id="menuToggle" class="nav-icon-btn menu-btn" aria-label="Menú">☰</button>
+</div>
+</div>
+</nav>
+
+<section id="hero">
+<div class="hero-bg">
+<div class="hero-overlay"></div>
+<canvas id="particles-canvas"></canvas>
+</div>
+<div class="hero-content">
+<div class="hero-badge">Plan de Gestión Universitaria</div>
+<h1 class="hero-title">PLAN DE GESTIÓN<br><span>UNIVERSITARIA</span></h1>
+<div class="hero-year">2026 – 2031</div>
+<p class="hero-slogan">"Darién merece una universidad a su altura"</p>
+<div class="hero-buttons">
+<a href="#axes" class="btn btn-primary">Conocer Propuesta</a>
+<a href="#candidates" class="btn btn-secondary">Nuestro Equipo</a>
+</div>
+</div>
+<div class="hero-scroll">
+<span>Desplázate</span>
+<div class="scroll-arrow"></div>
+</div>
+</section>
+
+<section id="candidates" class="section">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Equipo</span>
+<h2 class="section-title">Nuestros Candidatos</h2>
+<p class="section-desc">Liderazgo comprometido con la transformación universitaria</p>
+</div>
+<div class="candidates-grid" id="candidatesGrid"></div>
+</div>
+</section>
+
+<section id="vision" class="section vision-section">
+<div class="container">
+<div class="vision-content">
+<div class="vision-icon">🌟</div>
+<span class="section-tag light">Visión</span>
+<h2 class="vision-title">Una Universidad Más Inclusiva, Moderna y Comprometida con Darién</h2>
+<p class="vision-text" id="visionText"></p>
+</div>
+</div>
+</section>
+
+<section id="axes" class="section">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Ejes Estratégicos</span>
+<h2 class="section-title">Nuestro Plan de Acción</h2>
+<p class="section-desc">Cuatro pilares fundamentales para transformar la universidad</p>
+</div>
+<div class="axes-grid" id="axesGrid"></div>
+</div>
+</section>
+
+<section id="timeline" class="section timeline-section">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Hoja de Ruta</span>
+<h2 class="section-title">Línea de Tiempo</h2>
+<p class="section-desc">Nuestro camino hacia la excelencia universitaria</p>
+</div>
+<div class="timeline" id="timelineContainer"></div>
+</div>
+</section>
+
+<section id="dashboard" class="section dashboard-section">
+<div class="container">
+<div class="section-header">
+<span class="section-tag light">Metas</span>
+<h2 class="section-title">Dashboard de Metas</h2>
+<p class="section-desc light-text">Indicadores clave de nuestra gestión 2026-2031</p>
+</div>
+<div class="dashboard-grid" id="dashboardGrid"></div>
+</div>
+</section>
+
+<section id="values" class="section">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Valores</span>
+<h2 class="section-title">Nuestros Valores</h2>
+<p class="section-desc">Principios que guían nuestra gestión</p>
+</div>
+<div class="values-grid" id="valuesGrid"></div>
+</div>
+</section>
+
+<section id="gallery" class="section gallery-section">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Galería</span>
+<h2 class="section-title">Galería Institucional</h2>
+<p class="section-desc">Momentos que reflejan nuestra visión</p>
+</div>
+<div class="gallery-filters" id="galleryFilters">
+<a href="pages/galeria-liderazgo.html" class="filter-btn">Liderazgo</a>
+<a href="pages/galeria-equipo.html" class="filter-btn">Equipo</a>
+<a href="pages/galeria-eventos.html" class="filter-btn">Eventos</a>
+<a href="pages/galeria-comunidad.html" class="filter-btn">Comunidad</a>
+<a href="pages/galeria-estudiantes.html" class="filter-btn">Estudiantes</a>
+</div>
+<div class="gallery-masonry" id="galleryMasonry"></div>
+</div>
+<div id="lightbox" class="lightbox">
+<span class="lightbox-close">&times;</span>
+<img class="lightbox-content" id="lightboxImg">
+<div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+</section>
+
+<section id="testimonials" class="section testimonials-section">
+<div class="container">
+<div class="section-header">
+<span class="section-tag light">Testimonios</span>
+<h2 class="section-title">Voces de la Comunidad</h2>
+<p class="section-desc light-text">Lo que dicen estudiantes, docentes y egresados</p>
+</div>
+<div class="testimonials-carousel" id="testimonialsCarousel"></div>
+<div class="carousel-controls">
+<button class="carousel-btn" id="prevTestimonial">←</button>
+<div class="carousel-dots" id="testimonialDots"></div>
+<button class="carousel-btn" id="nextTestimonial">→</button>
+</div>
+</div>
+</section>
+
+<section id="comments" class="section comments-section">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Participación</span>
+<h2 class="section-title">Comentarios</h2>
+<p class="section-desc">Comparte tu opinión sobre el plan de gestión</p>
+</div>
+<div id="commentsArea">
+<div id="commentsList"></div>
+<div id="commentForm" class="comment-form">
+<div class="comment-form-header">
+<h4>Deja tu comentario</h4>
+<p class="comment-login-msg">Inicia sesión con tu correo para comentar</p>
+</div>
+<div class="comment-input-group">
+<textarea id="commentInput" placeholder="Escribe tu comentario..." rows="3" disabled></textarea>
+<button id="submitComment" class="btn btn-primary" disabled>Publicar</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="news" class="section">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Noticias</span>
+<h2 class="section-title">Actualizaciones</h2>
+<p class="section-desc">Mantente informado sobre nuestras actividades</p>
+</div>
+<div class="news-filters" id="newsFilters">
+<button class="filter-btn active" data-filter="all">Todas</button>
+<button class="filter-btn" data-filter="institucional">Institucional</button>
+<button class="filter-btn" data-filter="participacion">Participación</button>
+<button class="filter-btn" data-filter="internacional">Internacional</button>
+</div>
+<div class="news-grid" id="newsGrid"></div>
+</div>
+</section>
+
+<section id="transparency" class="section transparency-section">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Transparencia</span>
+<h2 class="section-title">Rendición de Cuentas</h2>
+<p class="section-desc">Información clara y accesible para toda la comunidad</p>
+</div>
+<div class="transparency-grid" id="transparencyGrid"></div>
+</div>
+</section>
+
+<section id="countdown" class="section countdown-section">
+<div class="container">
+<div class="section-header">
+<span class="section-tag light">Elecciones</span>
+<h2 class="section-title">Cuenta Regresiva</h2>
+<p class="section-desc light-text">Faltan menos de</p>
+</div>
+<div class="countdown-grid" id="countdownGrid">
+<div class="countdown-item"><span class="countdown-num" id="days">00</span><span class="countdown-label">Días</span></div>
+<div class="countdown-item"><span class="countdown-num" id="hours">00</span><span class="countdown-label">Horas</span></div>
+<div class="countdown-item"><span class="countdown-num" id="minutes">00</span><span class="countdown-label">Minutos</span></div>
+<div class="countdown-item"><span class="countdown-num" id="seconds">00</span><span class="countdown-label">Segundos</span></div>
+</div>
+</div>
+</section>
+
+<section id="cta" class="section cta-section">
+<div class="container">
+<div class="cta-content">
+<p class="cta-text">Es momento de avanzar hacia una universidad más inclusiva, moderna e innovadora para Darién</p>
+<div class="cta-button-wrapper">
+<a href="#" class="btn-cta">VOTA <span>#2</span></a>
+</div>
+</div>
+</div>
+</section>
+
+<footer id="footer" class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<h3>PGU <span>2026-2031</span></h3>
+<p>Plan de Gestión Universitaria</p>
+<p class="footer-slogan">"Darién merece una universidad a su altura"</p>
+</div>
+<div class="footer-social">
+<h4>Síguenos</h4>
+<div class="social-links">
+<a href="#" class="social-link" aria-label="Facebook">📘</a>
+<a href="#" class="social-link" aria-label="Twitter">🐦</a>
+<a href="#" class="social-link" aria-label="Instagram">📸</a>
+<a href="#" class="social-link" aria-label="YouTube">▶️</a>
+</div>
+</div>
+<div class="footer-contact">
+<h4>Contacto</h4>
+<p id="footerEmail">contacto@plandegestion.edu</p>
+<p id="footerPhone">+507 000-0000</p>
+<p id="footerAddress">Darién, Panamá</p>
+</div>
+<div class="footer-links">
+<h4>Transparencia</h4>
+<a href="pages/plan.html">Plan de Gestión</a>
+<a href="pages/presupuesto.html">Presupuesto</a>
+<a href="pages/cronograma.html">Cronograma</a>
+<a href="pages/rendicion.html">Rendición de Cuentas</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Plan de Gestión Universitaria. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+<div id="authModal" class="modal">
+<div class="modal-content">
+<span class="modal-close">&times;</span>
+<h2>Iniciar Sesión</h2>
+<p class="modal-desc">Ingresa tu correo electrónico para participar</p>
+<form id="authForm" class="auth-form">
+<div class="form-group">
+<label for="authName">Nombre</label>
+<input type="text" id="authName" placeholder="Tu nombre completo" required>
+</div>
+<div class="form-group">
+<label for="authEmail">Correo electrónico</label>
+<input type="email" id="authEmail" placeholder="correo@ejemplo.com" required>
+</div>
+<button type="submit" class="btn btn-primary auth-submit">Acceder</button>
+</form>
+<p class="auth-footer">
+<small>Al acceder aceptas participar de forma respetuosa en la comunidad.</small>
+</p>
+</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

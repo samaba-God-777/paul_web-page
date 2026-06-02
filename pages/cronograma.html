@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cronograma - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Cronograma</h2>
+<a href="../index.html#transparency">Transparencia</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">📅</div>
+<h1>Cronograma</h1>
+<p>Calendario de implementación y hitos del plan 2026-2031</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🗓️ Hitos del Plan de Gestión</h3>
+<p>Línea de tiempo con los principales hitos y entregables del Plan de Gestión Universitaria 2026-2031, organizados por año para garantizar el cumplimiento de cada objetivo estratégico.</p>
+</div>
+
+<div class="timeline-page">
+
+<div class="timeline-page-item fade-in">
+<div class="year">2026</div>
+<span class="badge">Diagnóstico</span>
+<h4>Diagnóstico y Planeación Estratégica</h4>
+<p>Evaluación integral de la infraestructura universitaria, diseño del plan estratégico participativo, conformación de mesas de trabajo con estudiantes, docentes y comunidad. Definición de indicadores base y línea de partida.</p>
+</div>
+
+<div class="timeline-page-item fade-in">
+<div class="year">2027</div>
+<span class="badge">Modernización</span>
+<h4>Modernización Inicial y TIC</h4>
+<p>Inicio de la modernización de laboratorios, implementación de plataformas TIC educativas, firma de primeros convenios internacionales, lanzamiento de programas de extensión comunitaria.</p>
+</div>
+
+<div class="timeline-page-item fade-in">
+<div class="year">2028</div>
+<span class="badge">Expansión</span>
+<h4>Expansión Académica y Científica</h4>
+<p>Apertura de nuevos programas académicos alineados con las necesidades del Darién, consolidación de redes científicas, fortalecimiento de la investigación aplicada, inicio de proyectos autosostenibles.</p>
+</div>
+
+<div class="timeline-page-item fade-in">
+<div class="year">2029</div>
+<span class="badge">Vinculación</span>
+<h4>Vinculación Territorial Masiva</h4>
+<p>Ampliación de programas de extensión comunitaria, ejecución de proyectos de desarrollo regional, masificación de pasantías internacionales, fortalecimiento de alianzas empresariales.</p>
+</div>
+
+<div class="timeline-page-item fade-in">
+<div class="year">2030</div>
+<span class="badge">Consolidación</span>
+<h4>Consolidación y Autogestión</h4>
+<p>Fortalecimiento de la autogestión financiera, consolidación de proyectos sostenibles, posicionamiento nacional e internacional, rendición de cuentas participativa.</p>
+</div>
+
+<div class="timeline-page-item fade-in">
+<div class="year">2031</div>
+<span class="badge">Excelencia</span>
+<h4>Universidad de Excelencia</h4>
+<p>Meta alcanzada: universidad inclusiva, moderna e innovadora, plenamente comprometida con el desarrollo del Darién. Evaluación final del plan y proyección 2032-2037.</p>
+</div>
+
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

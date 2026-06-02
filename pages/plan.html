@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan de Gestión Universitaria 2026-2031</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Plan de Gestión Universitaria</h2>
+<a href="../index.html#transparency">Transparencia</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">📄</div>
+<h1>Plan de Gestión Universitaria</h1>
+<p>Documento completo del Plan de Gestión Universitaria 2026-2031</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>📋 Resumen Ejecutivo</h3>
+<p>El Plan de Gestión Universitaria 2026-2031 es una hoja de ruta integral para transformar la educación superior en la región del Darién. Este documento establece las directrices estratégicas, los ejes de acción y las metas concretas para construir una universidad inclusiva, moderna y comprometida con el desarrollo territorial.</p>
+</div>
+
+<div class="card fade-in">
+<h3>🎯 Objetivos Generales</h3>
+<ul>
+<li>Fortalecer la vinculación de la universidad con el territorio y las comunidades del Darién.</li>
+<li>Modernizar la infraestructura académica y tecnológica para una educación de calidad.</li>
+<li>Impulsar la movilidad académica y el desarrollo profesional de estudiantes y docentes.</li>
+<li>Promover la autogestión financiera y las alianzas estratégicas nacionales e internacionales.</li>
+<li>Garantizar la transparencia y la rendición de cuentas en cada acción de gestión.</li>
+</ul>
+</div>
+
+<div class="grid-2">
+
+<div class="card fade-in">
+<h3>🌱 Vinculación e Investigación</h3>
+<p>Programas de extensión comunitaria, investigación aplicada al territorio, prácticas profesionales y mesas de trabajo con actores locales para articular la academia con las necesidades reales del Darién.</p>
+</div>
+
+<div class="card fade-in">
+<h3>🏗️ Infraestructura e Innovación</h3>
+<p>Modernización de laboratorios, implementación de tecnologías educativas TIC, desarrollo de centros de investigación y creación de espacios inteligentes para el aprendizaje.</p>
+</div>
+
+<div class="card fade-in">
+<h3>🌍 Movilidad y Desarrollo</h3>
+<p>Pasantías nacionales e internacionales, intercambio académico, capacitación continua para docentes y fortalecimiento de redes científicas regionales y globales.</p>
+</div>
+
+<div class="card fade-in">
+<h3>🤝 Autogestión y Alianzas</h3>
+<p>Proyectos autosostenibles, alianzas estratégicas con el sector empresarial, educación continua y cooperación internacional para diversificar las fuentes de financiamiento.</p>
+</div>
+
+</div>
+
+<div class="card fade-in">
+<h3>📊 Metas 2026-2031</h3>
+<div class="stat-grid">
+<div class="stat-card"><div class="num">12</div><div class="label">Nuevos Laboratorios</div></div>
+<div class="stat-card"><div class="num">25</div><div class="label">Convenios Internacionales</div></div>
+<div class="stat-card"><div class="num">40+</div><div class="label">Proyectos de Investigación</div></div>
+<div class="stat-card"><div class="num">5000+</div><div class="label">Estudiantes Beneficiados</div></div>
+<div class="stat-card"><div class="num">1500+</div><div class="label">Becas Gestionadas</div></div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

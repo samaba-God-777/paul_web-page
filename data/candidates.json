@@ -1,0 +1,26 @@
+[
+  {
+    "id": "director",
+    "name": "Paul Córdoba",
+    "role": "Director",
+    "bio": "Profesional con amplia experiencia en gestión universitaria, comprometido con la transformación académica y el desarrollo regional del Darién. Liderazgo visionario para construir una universidad inclusiva y de excelencia.",
+    "photo": "image/prncipal.png",
+    "social": {
+      "facebook": "#",
+      "twitter": "#",
+      "instagram": "#"
+    }
+  },
+  {
+    "id": "subdirector",
+    "name": "César Rujano",
+    "role": "Subdirector",
+    "bio": "Profesional dedicado a la innovación educativa y la vinculación comunitaria. Su experiencia en proyectos de desarrollo territorial fortalece el compromiso de la universidad con el Darién.",
+    "photo": "image/sub.png",
+    "social": {
+      "facebook": "#",
+      "twitter": "#",
+      "instagram": "#"
+    }
+  }
+]

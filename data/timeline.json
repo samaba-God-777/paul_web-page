@@ -1,0 +1,38 @@
+[
+  {
+    "year": 2026,
+    "title": "Diagnóstico y Planeación",
+    "description": "Evaluación integral de la infraestructura, diseño del plan estratégico y conformación de mesas de trabajo con la comunidad universitaria.",
+    "icon": "📋"
+  },
+  {
+    "year": 2027,
+    "title": "Modernización Inicial",
+    "description": "Inicio de la modernización de laboratorios, implementación de plataformas TIC y primeros convenios internacionales.",
+    "icon": "🚀"
+  },
+  {
+    "year": 2028,
+    "title": "Expansión Académica",
+    "description": "Apertura de nuevos programas académicos, consolidación de redes científicas y fortalecimiento de la investigación aplicada.",
+    "icon": "📚"
+  },
+  {
+    "year": 2029,
+    "title": "Vinculación Territorial",
+    "description": "Ampliación de programas de extensión comunitaria, proyectos de desarrollo regional y pasantías internacionales masivas.",
+    "icon": "🤲"
+  },
+  {
+    "year": 2030,
+    "title": "Consolidación y Autogestión",
+    "description": "Fortalecimiento de la autogestión financiera, proyectos sostenibles y posicionamiento nacional e internacional.",
+    "icon": "🏆"
+  },
+  {
+    "year": 2031,
+    "title": "Universidad de Excelencia",
+    "description": "Meta alcanzada: una universidad inclusiva, moderna, innovadora y plenamente comprometida con el desarrollo del Darién.",
+    "icon": "🎓"
+  }
+]

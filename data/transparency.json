@@ -1,0 +1,30 @@
+[
+  {
+    "id": "plan",
+    "title": "Plan de Gestión PDF",
+    "description": "Documento completo del Plan de Gestión Universitaria 2026-2031",
+    "icon": "📄",
+    "file": "pages/plan.html"
+  },
+  {
+    "id": "presupuesto",
+    "title": "Presupuesto",
+    "description": "Distribución presupuestaria detallada por ejes estratégicos",
+    "icon": "💰",
+    "file": "pages/presupuesto.html"
+  },
+  {
+    "id": "cronograma",
+    "title": "Cronograma",
+    "description": "Calendario de implementación y hitos del plan",
+    "icon": "📅",
+    "file": "pages/cronograma.html"
+  },
+  {
+    "id": "rendicion",
+    "title": "Rendición de Cuentas",
+    "description": "Informes periódicos de avance y ejecución del plan",
+    "icon": "📊",
+    "file": "pages/rendicion.html"
+  }
+]

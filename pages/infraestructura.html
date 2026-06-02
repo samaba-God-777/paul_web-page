@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infraestructura, Innovación y Producción - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Infraestructura e Innovación</h2>
+<a href="../index.html#axes">Ejes</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🏗️</div>
+<h1>Infraestructura, Innovación<br>y Producción</h1>
+<p>Modernización de espacios académicos e integración de tecnologías educativas de vanguardia</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🏗️ ¿Qué es?</h3>
+<p>Este eje estratégico impulsa la modernización integral de la infraestructura universitaria, la implementación de tecnologías de la información y comunicación (TIC) en la educación, la creación de espacios inteligentes y el fomento de la producción académica e investigativa.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card fade-in">
+<h3>📋 Acciones Principales</h3>
+<ul>
+<li>Modernización de laboratorios y talleres</li>
+<li>Implementación de TIC en todas las aulas</li>
+<li>Creación de espacios inteligentes de aprendizaje</li>
+<li>Fomento de la producción académica aplicada</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🎯 Objetivos</h3>
+<ul>
+<li>Dotar a la universidad de infraestructura de primer nivel</li>
+<li>Integrar tecnología educativa en todos los programas</li>
+<li>Crear entornos de aprendizaje innovadores</li>
+<li>Impulsar la investigación y producción académica</li>
+</ul>
+</div>
+
+</div>
+
+<div class="card fade-in">
+<h3>📊 Metas del Eje</h3>
+<div class="stat-grid">
+<div class="stat-card"><div class="num">12</div><div class="label">Laboratorios Modernizados</div></div>
+<div class="stat-card"><div class="num">100%</div><div class="label">Aulas con TIC</div></div>
+<div class="stat-card"><div class="num">8</div><div class="label">Espacios Inteligentes</div></div>
+<div class="stat-card"><div class="num">+50</div><div class="label">Publicaciones Académicas</div></div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

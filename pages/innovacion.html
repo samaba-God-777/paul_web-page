@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovación - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Innovación</h2>
+<a href="../index.html#values">Valores</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">💡</div>
+<h1>Innovación</h1>
+<p>Transformando la educación con tecnología, creatividad y visión de futuro</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>💡 ¿Qué significa la Innovación para nosotros?</h3>
+<p>La innovación es la clave para una educación superior competitiva y relevante. Apostamos por la integración de tecnologías educativas de vanguardia, metodologías de enseñanza disruptivas y una cultura de mejora continua que prepare a nuestros estudiantes para los desafíos del siglo XXI.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card fade-in">
+<h3>🚀 Proyectos Innovadores</h3>
+<ul>
+<li>Implementación de TIC en todos los programas académicos</li>
+<li>Laboratorios inteligentes con equipamiento de última generación</li>
+<li>Plataformas de aprendizaje híbrido y virtual</li>
+<li>Centro de innovación y emprendimiento universitario</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🎓 Metodologías Disruptivas</h3>
+<ul>
+<li>Aprendizaje basado en proyectos y problemas</li>
+<li>Gamificación educativa</li>
+<li>Realidad virtual y aumentada en la enseñanza</li>
+<li>Inteligencia artificial aplicada a la educación</li>
+</ul>
+</div>
+
+</div>
+
+<div class="card fade-in">
+<h3>📈 Innovación en Cifras</h3>
+<div class="stat-grid">
+<div class="stat-card"><div class="num">12</div><div class="label">Laboratorios Modernizados</div></div>
+<div class="stat-card"><div class="num">5</div><div class="label">Plataformas Digitales</div></div>
+<div class="stat-card"><div class="num">100%</div><div class="label">Aulas con TIC</div></div>
+<div class="stat-card"><div class="num">+50</div><div class="label">Docentes Capacitados</div></div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

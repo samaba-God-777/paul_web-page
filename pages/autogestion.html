@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autogestión y Alianzas Estratégicas - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Autogestión y Alianzas</h2>
+<a href="../index.html#axes">Ejes</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🤝</div>
+<h1>Autogestión y Alianzas<br>Estratégicas</h1>
+<p>Sostenibilidad financiera, convenios institucionales y cooperación internacional para el desarrollo universitario</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🤝 ¿Qué es?</h3>
+<p>Este eje estratégico impulsa la autogestión financiera de la universidad a través de proyectos sostenibles, alianzas estratégicas con el sector empresarial, convenios institucionales y cooperación internacional que diversifiquen las fuentes de financiamiento y fortalezcan la proyección global de la institución.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card fade-in">
+<h3>📋 Acciones Principales</h3>
+<ul>
+<li>Gestión de convenios institucionales nacionales e internacionales</li>
+<li>Desarrollo de proyectos autosostenibles</li>
+<li>Alianzas estratégicas con el sector empresarial</li>
+<li>Programas de cooperación internacional</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🎯 Objetivos</h3>
+<ul>
+<li>Garantizar la sostenibilidad financiera de la universidad</li>
+<li>Fortalecer vínculos con el sector productivo</li>
+<li>Atraer cooperación y recursos internacionales</li>
+<li>Diversificar fuentes de financiamiento</li>
+</ul>
+</div>
+
+</div>
+
+<div class="card fade-in">
+<h3>📊 Metas del Eje</h3>
+<div class="stat-grid">
+<div class="stat-card"><div class="num">30</div><div class="label">Convenios Activos</div></div>
+<div class="stat-card"><div class="num">15</div><div class="label">Proyectos Sostenibles</div></div>
+<div class="stat-card"><div class="num">10</div><div class="label">Alianzas Empresariales</div></div>
+<div class="stat-card"><div class="num">+40%</div><div class="label">Autogestión Financiera</div></div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

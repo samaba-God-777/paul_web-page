@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Participación - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Participación</h2>
+<a href="../index.html#values">Valores</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🗳️</div>
+<h1>Participación</h1>
+<p>Construyendo juntos el futuro de la universidad del Darién</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🗳️ ¿Qué significa la Participación para nosotros?</h3>
+<p>La participación es el motor de nuestra gestión. Creemos que las mejores decisiones se toman de forma colectiva, involucrando a estudiantes, docentes, administrativos y comunidad en general. Nuestra universidad será construida por y para todos.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card fade-in">
+<h3>🤲 Espacios de Participación</h3>
+<ul>
+<li>Mesas de trabajo permanentes por eje estratégico</li>
+<li>Asambleas universitarias abiertas y periódicas</li>
+<li>Encuestas digitales para la toma de decisiones</li>
+<li>Foros de discusión sobre temas clave</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>👥 ¿Quiénes participan?</h3>
+<ul>
+<li>Estudiantes de todas las carreras</li>
+<li>Docentes e investigadores</li>
+<li>Personal administrativo</li>
+<li>Egresados y comunidad del Darién</li>
+</ul>
+</div>
+
+</div>
+
+<div class="card fade-in">
+<h3>📋 Mecanismos de Participación Ciudadana</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Mecanismo</th><th>Frecuencia</th><th>Participantes</th></tr>
+</thead>
+<tbody>
+<tr><td>Mesas de Trabajo</td><td>Mensual</td><td>Estudiantes y docentes</td></tr>
+<tr><td>Asambleas Universitarias</td><td>Trimestral</td><td>Toda la comunidad</td></tr>
+<tr><td>Encuestas Digitales</td><td>Bimestral</td><td>Comunidad universitaria</td></tr>
+<tr><td>Audiencias Públicas</td><td>Semestral</td><td>Ciudadanía en general</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

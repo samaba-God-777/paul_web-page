@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noticias Institucionales - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Noticias Institucionales</h2>
+<a href="../index.html#news">Noticias</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🏛️</div>
+<h1>Noticias Institucionales</h1>
+<p>Información oficial sobre el Plan de Gestión Universitaria 2026-2031</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🏛️ Lanzamiento del Plan de Gestión Universitaria 2026-2031</h3>
+<p>Presentación oficial del plan que guiará el desarrollo de nuestra universidad durante los próximos cinco años. Este documento estratégico establece las bases para transformar la educación superior en el Darién, con un enfoque inclusivo, moderno y comprometido con el desarrollo territorial.</p>
+</div>
+
+<div class="card fade-in">
+<h3>📢 Comunicados Oficiales</h3>
+<p>Mantente informado sobre las decisiones, avances y eventos institucionales relacionados con la implementación del Plan de Gestión Universitaria. Todos los comunicados son públicos y están disponibles para la comunidad.</p>
+</div>
+
+<div class="card fade-in">
+<h3>📅 Próximos Eventos Institucionales</h3>
+<ul>
+<li>Asamblea Universitaria Informativa - Julio 2026</li>
+<li>Presentación de Avances del Plan - Septiembre 2026</li>
+<li>Foro Institucional: El Futuro de la Universidad en Darién - Noviembre 2026</li>
+<li>Rendición de Cuentas Anual - Diciembre 2026</li>
+</ul>
+</div>
+
+<a href="../index.html#news" class="back-home">← Volver a noticias</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

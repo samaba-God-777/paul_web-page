@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "María González",
+    "role": "Estudiante de Ingeniería",
+    "text": "La universidad ha transformado mi vida. Con este nuevo plan de gestión, sé que muchos más jóvenes del Darién tendrán acceso a una educación de calidad.",
+    "avatar": ""
+  },
+  {
+    "id": 2,
+    "name": "Carlos Mendoza",
+    "role": "Docente Investigador",
+    "text": "La visión de modernización e investigación aplicada que propone este plan es justo lo que necesitamos para llevar nuestra universidad al siguiente nivel.",
+    "avatar": ""
+  },
+  {
+    "id": 3,
+    "name": "Ana Rodríguez",
+    "role": "Egresada y Profesional",
+    "text": "Como egresada, veo en esta propuesta el compromiso real de formar profesionales que contribuyan al desarrollo del Darién y del país.",
+    "avatar": ""
+  }
+]

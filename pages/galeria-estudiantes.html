@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galería - Estudiantes - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+.gallery-item{
+    border-radius:12px;
+    overflow:hidden;
+    cursor:pointer;
+    position:relative;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:all 0.4s ease;
+}
+.gallery-item:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.15);}
+.gallery-item img{width:100%;display:block;transition:transform 0.6s ease;}
+.gallery-item:hover img{transform:scale(1.08);}
+</style>
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Galería - Estudiantes</h2>
+<a href="../index.html#gallery">Galería</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🎓</div>
+<h1>Estudiantes</h1>
+<p>El centro de nuestra gestión: los estudiantes universitarios</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="gallery-grid">
+<div class="gallery-item"><img src="../image/WhatsApp%20Image%202026-06-02%20at%2013.56.48.jpeg" alt="Estudiantes en actividad" loading="lazy"></div>
+</div>
+<a href="../index.html#gallery" class="back-home">← Volver a galería</a>
+</div>
+</section>
+
+</body>
+</html>

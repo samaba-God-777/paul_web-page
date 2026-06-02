@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inclusión - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Inclusión</h2>
+<a href="../index.html#values">Valores</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🤗</div>
+<h1>Inclusión</h1>
+<p>Una universidad donde todos y todas tienen un lugar</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🤗 ¿Qué significa la Inclusión para nosotros?</h3>
+<p>La inclusión es la base de una educación verdaderamente transformadora. Nos comprometemos a garantizar el acceso equitativo a la educación superior, eliminando barreras económicas, sociales, culturales y físicas para que cada persona del Darién pueda desarrollar su máximo potencial.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card fade-in">
+<h3>🎯 Programas Inclusivos</h3>
+<ul>
+<li>Becas de acceso para estudiantes de comunidades rurales</li>
+<li>Programas de apoyo académico y tutoría</li>
+<li>Adaptaciones curriculares para personas con discapacidad</li>
+<li>Infraestructura accesible y universal</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🌍 Diversidad y Equidad</h3>
+<ul>
+<li>Respeto y valoración de la diversidad cultural</li>
+<li>Equidad de género en todos los espacios</li>
+<li>Inclusión de comunidades indígenas y afrodescendientes</li>
+<li>Programas de acompañamiento psicosocial</li>
+</ul>
+</div>
+
+</div>
+
+<div class="card fade-in">
+<h3>📊 Metas de Inclusión</h3>
+<div class="stat-grid">
+<div class="stat-card"><div class="num">+40%</div><div class="label">Becas para Zonas Rurales</div></div>
+<div class="stat-card"><div class="num">100%</div><div class="label">Infraestructura Accesible</div></div>
+<div class="stat-card"><div class="num">15</div><div class="label">Programas de Apoyo</div></div>
+<div class="stat-card"><div class="num">0</div><div class="label">Barreras de Acceso</div></div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

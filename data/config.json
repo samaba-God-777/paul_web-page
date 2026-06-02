@@ -1,0 +1,22 @@
+{
+  "siteName": "Plan de Gestión Universitaria 2026-2031",
+  "slogan": "Darién merece una universidad a su altura",
+  "cta": "VOTA #2",
+  "electionDate": "2026-10-15T08:00:00",
+  "contact": {
+    "email": "contacto@plandegestion.edu",
+    "phone": "+507 000-0000",
+    "address": "Darién, Panamá"
+  },
+  "vision": {
+    "title": "Una Universidad Más Inclusiva, Moderna y Comprometida con Darién",
+    "text": "Nuestra visión es construir una universidad que sea el motor del desarrollo del Darién. Durante los próximos cinco años, trabajaremos para transformar la educación superior en la región, garantizando el acceso inclusivo, la modernización de la infraestructura académica, el fortalecimiento de la investigación aplicada al territorio y la creación de alianzas estratégicas que potencien el talento de nuestros estudiantes y docentes. Soñamos con una universidad que no solo forme profesionales, sino que lidere el cambio social, económico y cultural que Darién necesita."
+  },
+  "values": [
+    { "name": "Transparencia", "icon": "🔍", "page": "pages/transparencia.html" },
+    { "name": "Participación", "icon": "🗳️", "page": "pages/participacion.html" },
+    { "name": "Inclusión", "icon": "🤗", "page": "pages/inclusion.html" },
+    { "name": "Innovación", "icon": "💡", "page": "pages/innovacion.html" },
+    { "name": "Compromiso Social", "icon": "🤲", "page": "pages/compromiso.html" }
+  ]
+}

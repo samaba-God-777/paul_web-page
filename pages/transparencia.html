@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transparencia - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Transparencia</h2>
+<a href="../index.html#values">Valores</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🔍</div>
+<h1>Transparencia</h1>
+<p>Gestión abierta, clara y accesible para toda la comunidad universitaria</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🔍 ¿Qué significa la Transparencia para nosotros?</h3>
+<p>La transparencia es el pilar fundamental de nuestra gestión. Creemos que la comunidad universitaria tiene derecho a conocer cada decisión, cada inversión y cada resultado de nuestra administración. Por eso nos comprometemos a mantener una comunicación abierta, permanente y accesible para todos.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card fade-in">
+<h3>📢 Canales de Información</h3>
+<ul>
+<li>Plataforma digital de transparencia con actualización en tiempo real</li>
+<li>Informes trimestrales de gestión disponibles para toda la comunidad</li>
+<li>Asambleas universitarias abiertas para rendición de cuentas</li>
+<li>Boletín informativo periódico con avances y resultados</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>📊 Compromisos</h3>
+<ul>
+<li>Publicación de informes financieros detallados</li>
+<li>Difusión de resultados de auditorías internas y externas</li>
+<li>Acceso público a la ejecución presupuestaria</li>
+<li>Espacios de diálogo y retroalimentación comunitaria</li>
+</ul>
+</div>
+
+</div>
+
+<div class="card fade-in">
+<h3>📈 Indicadores de Transparencia</h3>
+<div class="stat-grid">
+<div class="stat-card"><div class="num">100%</div><div class="label">Informes Publicados</div></div>
+<div class="stat-card"><div class="num">12</div><div class="label">Asambleas Anuales</div></div>
+<div class="stat-card"><div class="num">4</div><div class="label">Auditorías por Año</div></div>
+<div class="stat-card"><div class="num">24/7</div><div class="label">Acceso a Plataforma</div></div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>
