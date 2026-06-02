@@ -1452,6 +1452,31 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit;}
     margin-bottom:5px;
 }
 
+.footer-email{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 18px;
+    border-radius:50px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.1);
+    color:rgba(255,255,255,0.75);
+    font-size:0.85rem;
+    font-weight:500;
+    text-decoration:none;
+    transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+    margin-bottom:8px;
+    width:fit-content;
+}
+
+.footer-email:hover{
+    background:linear-gradient(135deg,#d93025,#ea4335);
+    border-color:transparent;
+    color:#fff;
+    transform:translateY(-3px) scale(1.03);
+    box-shadow:0 6px 20px rgba(234,67,53,0.3);
+}
+
 .footer-links h4{
     color:var(--accent);
     margin-bottom:15px;

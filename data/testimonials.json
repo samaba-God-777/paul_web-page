@@ -33,5 +33,12 @@
     "role": "Magister\nProfesora de la Facultad de Humanidades del CRUD",
     "text": "Estudiamos 4 años la licenciatura en inglés y siempre demostró humildad y capacidad de trabajo en equipo. Por eso apoyo su nómina.",
     "avatar": ""
+  },
+  {
+    "id": 6,
+    "name": "Luis A. Delgado H.",
+    "role": "Magister\nEgresado desde 2013",
+    "text": "Considero que las iniciativas propuestas son muy buenas y alcanzables. Sin embargo, es necesario fortalecer la oferta académica en Darién, especialmente en áreas de Administración de Empresas y Contabilidad. Como egresado de esta universidad desde el 2013, he observado que la oferta en estas disciplinas ha sido muy limitada, a pesar de la demanda existente. Ampliar estas carreras a nivel de licenciatura, postgrado y maestría brindará mayores oportunidades de formación y desarrollo a los estudiantes de la región.",
+    "avatar": ""
   }
 ]

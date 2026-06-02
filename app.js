@@ -438,8 +438,6 @@ async function init(){
     setInterval(updateCountdown,1000);
 
     const contact=config.contact;
-    document.getElementById('footerEmail').textContent=contact.email;
-    document.getElementById('footerPhone').textContent=contact.phone;
     document.getElementById('footerAddress').textContent=contact.address;
 
     const observer=new IntersectionObserver((entries)=>{

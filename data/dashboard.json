@@ -3,36 +3,50 @@
     {
       "id": "laboratorios",
       "label": "Nuevos Laboratorios",
-      "value": 12,
+      "value": 2,
       "icon": "🔬",
       "suffix": ""
     },
     {
       "id": "convenios",
-      "label": "Convenios Internacionales",
-      "value": 25,
+      "label": "Convenios Interinstitucionales",
+      "value": 5,
       "icon": "🌐",
       "suffix": "+"
     },
     {
       "id": "investigacion",
       "label": "Proyectos de Investigación",
-      "value": 40,
+      "value": 6,
       "icon": "📊",
+      "suffix": "+"
+    },
+    {
+      "id": "jornadas",
+      "label": "Jornadas Comunitarias",
+      "value": 10,
+      "icon": "🤲",
       "suffix": "+"
     },
     {
       "id": "estudiantes",
       "label": "Estudiantes Beneficiados",
-      "value": 5000,
+      "value": 20,
       "icon": "👥",
       "suffix": "+"
     },
     {
       "id": "becas",
       "label": "Becas Gestionadas",
-      "value": 1500,
+      "value": 15,
       "icon": "🎯",
+      "suffix": "+"
+    },
+    {
+      "id": "talleres",
+      "label": "Talleres y Capacitaciones",
+      "value": 8,
+      "icon": "📚",
       "suffix": "+"
     }
   ]
