@@ -295,11 +295,11 @@ async function init(){
     const dashboardGrid=document.getElementById('dashboardGrid');
     dashboard.goals.forEach(g=>{
         dashboardGrid.innerHTML+=`
-            <div class="dashboard-card fade-in">
+            <a href="${g.page||'#'}" class="dashboard-card fade-in">
                 <div class="dashboard-icon">${g.icon}</div>
                 <div class="dashboard-number" data-target="${g.value}">0</div>
                 <div class="dashboard-label">${g.label}</div>
-            </div>`;
+            </a>`;
     });
 
     const valuesGrid=document.getElementById('valuesGrid');

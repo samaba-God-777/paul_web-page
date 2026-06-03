@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personas Beneficiadas - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Personas Beneficiadas</h2>
+<a href="../index.html#dashboard">Metas</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">👥</div>
+<h1>Personas Beneficiadas</h1>
+<p>Llevar los beneficios de la universidad a más personas en Darién</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>👥 ¿Qué significa?</h3>
+<p>Buscamos que más personas en Darién se beneficien directamente de los programas, proyectos y servicios que ofrece la universidad. Esto incluye estudiantes, docentes, familias y comunidades enteras.</p>
+</div>
+
+<div class="grid-2">
+<div class="card fade-in">
+<h3>📋 ¿Qué haremos?</h3>
+<ul>
+<li>Ampliar la oferta académica con nuevas carreras y diplomados</li>
+<li>Crear programas de becas para estudiantes de bajos recursos</li>
+<li>Ofrecer cursos libres y talleres abiertos a la comunidad</li>
+<li>Llevar servicios universitarios a las comunidades rurales</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🎯 Meta</h3>
+<div class="stat-grid">
+<div class="stat-card"><div class="num">10+</div><div class="label">Personas Beneficiadas</div></div>
+</div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

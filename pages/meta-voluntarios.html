@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voluntarios Activos - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Voluntarios Activos</h2>
+<a href="../index.html#dashboard">Metas</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🤝</div>
+<h1>Voluntarios Activos</h1>
+<p>Estudiantes y docentes comprometidos con el cambio</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🤝 ¿Qué significa?</h3>
+<p>Los voluntarios activos son estudiantes, docentes y personal administrativo que dedican parte de su tiempo a ayudar a la comunidad. Creemos en el poder del trabajo en equipo y la solidaridad para transformar Darién.</p>
+</div>
+
+<div class="grid-2">
+<div class="card fade-in">
+<h3>📋 ¿Qué haremos?</h3>
+<ul>
+<li>Crear un programa de voluntariado universitario permanente</li>
+<li>Jornadas de limpieza y reforestación en la comunidad</li>
+<li>Apoyo escolar para niños y jóvenes en riesgo</li>
+<li>Brigadas de salud y prevención</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🎯 Meta</h3>
+<div class="stat-grid">
+<div class="stat-card"><div class="num">8</div><div class="label">Voluntarios Activos</div></div>
+</div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

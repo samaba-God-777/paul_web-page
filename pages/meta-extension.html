@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyectos de Extensión - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Proyectos de Extensión</h2>
+<a href="../index.html#dashboard">Metas</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">🌱</div>
+<h1>Proyectos de Extensión</h1>
+<p>Proyectos que conectan la universidad con la comunidad</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card fade-in">
+<h3>🌱 ¿Qué significa?</h3>
+<p>Los proyectos de extensión son iniciativas donde estudiantes y docentes trabajan directamente con la comunidad para resolver problemas reales. No solo aprendemos en el aula, sino que ponemos nuestros conocimientos al servicio de Darién.</p>
+</div>
+
+<div class="grid-2">
+<div class="card fade-in">
+<h3>📋 ¿Qué haremos?</h3>
+<ul>
+<li>Proyectos de investigación sobre la cultura y el ambiente de Darién</li>
+<li>Programas de alfabetización y educación comunitaria</li>
+<li>Talleres de emprendimiento para jóvenes y adultos</li>
+<li>Proyectos de salud y prevención en comunidades</li>
+</ul>
+</div>
+
+<div class="card fade-in">
+<h3>🎯 Meta</h3>
+<div class="stat-grid">
+<div class="stat-card"><div class="num">7</div><div class="label">Proyectos de Extensión</div></div>
+</div>
+</div>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>

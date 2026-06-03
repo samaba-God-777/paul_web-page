@@ -5,28 +5,32 @@
       "label": "Personas Beneficiadas",
       "value": 10,
       "icon": "👥",
-      "suffix": "+"
+      "suffix": "+",
+      "page": "pages/meta-personas.html"
     },
     {
       "id": "comunidades",
       "label": "Comunidades Atendidas",
       "value": 6,
       "icon": "🏘️",
-      "suffix": ""
+      "suffix": "",
+      "page": "pages/meta-comunidades.html"
     },
     {
       "id": "extension",
       "label": "Proyectos de Extensión",
       "value": 7,
       "icon": "🌱",
-      "suffix": ""
+      "suffix": "",
+      "page": "pages/meta-extension.html"
     },
     {
       "id": "voluntarios",
       "label": "Voluntarios Activos",
       "value": 8,
       "icon": "🤝",
-      "suffix": ""
+      "suffix": "",
+      "page": "pages/meta-voluntarios.html"
     }
   ]
 }
