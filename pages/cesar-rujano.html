@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magíster César Rujano - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.profile-section{
+    display:grid;
+    grid-template-columns:300px 1fr;
+    gap:40px;
+    align-items:start;
+}
+.profile-img{
+    width:100%;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-lg);
+}
+.profile-name{
+    font-size:2.5rem;
+    font-weight:800;
+    color:var(--primary);
+    margin-bottom:5px;
+}
+.profile-role{
+    color:var(--accent);
+    font-size:1.1rem;
+    font-weight:600;
+    margin-bottom:20px;
+}
+.profile-text{
+    color:#555;
+    line-height:1.8;
+    font-size:0.95rem;
+    margin-bottom:15px;
+}
+.facet-card{
+    background:var(--white);
+    border-radius:var(--radius);
+    padding:30px;
+    box-shadow:var(--shadow);
+    margin-bottom:25px;
+    transition:var(--transition);
+}
+.facet-card:hover{
+    box-shadow:var(--shadow-lg);
+    transform:translateY(-4px);
+}
+.facet-card h3{
+    color:var(--primary);
+    font-size:1.3rem;
+    margin-bottom:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.facet-card ul{
+    list-style:none;
+    padding:0;
+}
+.facet-card li{
+    padding:10px 0;
+    border-bottom:1px solid rgba(0,0,0,0.05);
+    color:#555;
+    line-height:1.7;
+    font-size:0.95rem;
+}
+.facet-card li:last-child{border-bottom:none;}
+.facet-card li::before{
+    content:'→';
+    color:var(--accent);
+    margin-right:10px;
+    font-weight:700;
+}
+.facet-card a{
+    color:var(--secondary);
+    font-weight:500;
+    text-decoration:underline;
+}
+.facet-card a:hover{
+    color:var(--accent);
+}
+.source-note{
+    background:var(--light);
+    border-radius:var(--radius-sm);
+    padding:20px;
+    margin-top:30px;
+    font-size:0.85rem;
+    color:var(--gray);
+}
+.source-note a{
+    color:var(--secondary);
+    text-decoration:underline;
+}
+.source-note ol{
+    margin-top:10px;
+    padding-left:20px;
+}
+.source-note li{
+    margin-bottom:6px;
+    font-size:0.85rem;
+}
+@media(max-width:768px){
+    .profile-section{
+        grid-template-columns:1fr;
+    }
+    .profile-img{
+        max-width:250px;
+        margin:0 auto;
+    }
+    .profile-name{font-size:1.8rem;}
+}
+</style>
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Magíster César Rujano</h2>
+<a href="../index.html#candidates">Equipo</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">👨‍🏫</div>
+<h1>Magíster César Anel<br>Rujano Montilla</h1>
+<p>Profesor de inglés, administrador académico y Subdirector del CRU Darién</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="profile-section">
+<div>
+<img src="../image/sub.png" alt="Magíster César Rujano" class="profile-img">
+</div>
+<div>
+<h1 class="profile-name">Magíster César Anel Rujano Montilla</h1>
+<div class="profile-role">Subdirector · CRU Darién</div>
+<p class="profile-text">César Anel Rujano Montilla es un destacado profesor de inglés panameño y administrador académico que actualmente ejerce como subdirector del Centro Regional Universitario de Darién (CRU Darién), una extensión de la Universidad de Panamá.</p>
+<p class="profile-text">Cuenta con una trayectoria en el sector educativo que inició en 1998, dividiendo sus funciones entre el Ministerio de Educación de Panamá (MEDUCA) y la educación superior.</p>
+</div>
+</div>
+
+<div class="facet-card">
+<h3>🎓 Perfil Académico y Profesional</h3>
+<ul>
+<li><strong>Especialización:</strong> Posee una Maestría en Enseñanza del Inglés como Lengua Extranjera (TEFL) y está especializado en entornos virtuales de aprendizaje.</li>
+<li><strong>Docencia:</strong> Es profesor activo en la Universidad de Panamá y comparte de manera regular materiales educativos digitales sobre gramática inglesa mediante plataformas como <a href="https://es.scribd.com/document/968606251/Cesar-Rujano-CV" target="_blank">Slideshare de Scribd</a>.</li>
+<li><strong>Gestión Universitaria:</strong> Trabaja en el equipo directivo del CRU Darién junto al director de la entidad, el ingeniero Andrés R. Chang M.</li>
+<li><strong>Investigación:</strong> Está afiliado a redes académicas como <a href="https://www.researchgate.net/profile/Cesar_Rujano" target="_blank">ResearchGate</a> y cuenta con certificaciones en ética de la investigación y ensayos clínicos.</li>
+</ul>
+</div>
+
+<div class="facet-card">
+<h3>📚 Trayectoria Docente</h3>
+<ul>
+<li>Inició su carrera en 1998 en el Ministerio de Educación de Panamá (MEDUCA)</li>
+<li>Profesor de inglés en educación superior</li>
+<li>Comparte materiales educativos digitales sobre gramática inglesa: condicionales, gerundios, estilo indirecto y más</li>
+<li>Experiencia en entornos virtuales de aprendizaje</li>
+</ul>
+</div>
+
+<div class="source-note">
+<strong>Referencias:</strong>
+<ol>
+<li><a href="https://es.scribd.com/document/968606251/Cesar-Rujano-CV" target="_blank">Scribd - Currículum Vítae César Rujano</a></li>
+<li><a href="https://crudarien.up.ac.pa/directivos" target="_blank">CRU Darién - Directivos</a></li>
+<li><a href="https://www.researchgate.net/profile/Cesar_Rujano" target="_blank">ResearchGate - Perfil de César Rujano</a></li>
+</ol>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>
