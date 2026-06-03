@@ -1,50 +1,50 @@
 [
   {
     "id": "vinculacion",
-    "title": "Vinculación e Investigación con el Territorio",
+    "title": "Universidad cerca de la gente",
     "icon": "🌱",
     "page": "pages/vinculacion.html",
     "items": [
-      "Extensión comunitaria",
-      "Investigación aplicada",
-      "Prácticas profesionales",
-      "Trabajo con comunidades"
+      "Apoyar a las comunidades",
+      "Investigar lo que necesita Darién",
+      "Practicantías desde el primer año",
+      "Trabajar junto a la comunidad"
     ]
   },
   {
     "id": "infraestructura",
-    "title": "Infraestructura, Innovación y Producción",
+    "title": "Más y mejores espacios para estudiar",
     "icon": "🏗️",
     "page": "pages/infraestructura.html",
     "items": [
-      "Modernización de laboratorios",
-      "TIC educativas",
-      "Espacios inteligentes",
-      "Investigación aplicada"
+      "Laboratorios modernos",
+      "Internet y tecnología en todas las aulas",
+      "Salones inteligentes y cómodos",
+      "Investigación para resolver problemas reales"
     ]
   },
   {
     "id": "movilidad",
-    "title": "Movilidad y Desarrollo Profesional",
+    "title": "Oportunidades dentro y fuera del país",
     "icon": "🌍",
     "page": "pages/movilidad.html",
     "items": [
-      "Intercambios académicos",
-      "Pasantías internacionales",
-      "Redes científicas",
-      "Formación continua"
+      "Intercambios con otras universidades",
+      "Pasantías en el extranjero",
+      "Conexión con científicos de otros países",
+      "Cursos y diplomados para toda la vida"
     ]
   },
   {
     "id": "autogestion",
-    "title": "Autogestión y Alianzas Estratégicas",
+    "title": "Alianzas que traen beneficios",
     "icon": "🤝",
     "page": "pages/autogestion.html",
     "items": [
-      "Convenios institucionales",
-      "Proyectos sostenibles",
-      "Cooperación internacional",
-      "Vinculación empresarial"
+      "Convenios con empresas e instituciones",
+      "Proyectos que generan recursos",
+      "Apoyo internacional para la universidad",
+      "Más oportunidades de trabajo para estudiantes"
     ]
   }
 ]
