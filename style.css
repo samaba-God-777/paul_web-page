@@ -568,6 +568,22 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit;}
     color:rgba(255,255,255,0.85);
 }
 
+.vision-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 36px;
+    background:var(--accent);
+    color:var(--primary);
+    border-radius:50px;
+    font-weight:600;
+    font-size:1rem;
+    transition:var(--transition);
+}
+.vision-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 40px rgba(244,180,0,0.4);
+}
+
 @media(max-width:768px){
     .vision-title{font-size:1.8rem;}
     .vision-text{font-size:1rem;}
