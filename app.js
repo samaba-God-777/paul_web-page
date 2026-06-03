@@ -262,7 +262,7 @@ async function init(){
                     <div class="candidate-role">${c.role}</div>
                     <p class="candidate-bio">${c.bio}</p>
                     <div class="candidate-social">${socialIcons}</div>
-                    <a href="#" class="candidate-btn">Conocer más</a>
+                    <a href="${c.page||'#'}" class="candidate-btn">Conocer más</a>
                 </div>
             </div>`;
     });

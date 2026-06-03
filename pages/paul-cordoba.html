@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Paul Córdoba - Plan de Gestión Universitaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.profile-section{
+    display:grid;
+    grid-template-columns:300px 1fr;
+    gap:40px;
+    align-items:start;
+}
+.profile-img{
+    width:100%;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-lg);
+}
+.profile-name{
+    font-size:2.5rem;
+    font-weight:800;
+    color:var(--primary);
+    margin-bottom:5px;
+}
+.profile-role{
+    color:var(--accent);
+    font-size:1.1rem;
+    font-weight:600;
+    margin-bottom:20px;
+}
+.profile-text{
+    color:#555;
+    line-height:1.8;
+    font-size:0.95rem;
+    margin-bottom:15px;
+}
+.facet-card{
+    background:var(--white);
+    border-radius:var(--radius);
+    padding:30px;
+    box-shadow:var(--shadow);
+    margin-bottom:25px;
+    transition:var(--transition);
+}
+.facet-card:hover{
+    box-shadow:var(--shadow-lg);
+    transform:translateY(-4px);
+}
+.facet-card h3{
+    color:var(--primary);
+    font-size:1.3rem;
+    margin-bottom:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.facet-card ul{
+    list-style:none;
+    padding:0;
+}
+.facet-card li{
+    padding:10px 0;
+    border-bottom:1px solid rgba(0,0,0,0.05);
+    color:#555;
+    line-height:1.7;
+    font-size:0.95rem;
+}
+.facet-card li:last-child{border-bottom:none;}
+.facet-card li::before{
+    content:'→';
+    color:var(--accent);
+    margin-right:10px;
+    font-weight:700;
+}
+.facet-card a{
+    color:var(--secondary);
+    font-weight:500;
+    text-decoration:underline;
+}
+.facet-card a:hover{
+    color:var(--accent);
+}
+.source-note{
+    background:var(--light);
+    border-radius:var(--radius-sm);
+    padding:20px;
+    margin-top:30px;
+    font-size:0.85rem;
+    color:var(--gray);
+}
+.source-note a{
+    color:var(--secondary);
+    text-decoration:underline;
+}
+.source-note ol{
+    margin-top:10px;
+    padding-left:20px;
+}
+.source-note li{
+    margin-bottom:6px;
+    font-size:0.85rem;
+}
+@media(max-width:768px){
+    .profile-section{
+        grid-template-columns:1fr;
+    }
+    .profile-img{
+        max-width:250px;
+        margin:0 auto;
+    }
+    .profile-name{font-size:1.8rem;}
+}
+</style>
+</head>
+<body>
+
+<nav class="page-nav">
+<a href="../index.html">← <span>Volver al inicio</span></a>
+<h2>Dr. Paul Córdoba</h2>
+<a href="../index.html#candidates">Equipo</a>
+</nav>
+
+<section class="page-hero">
+<div class="container">
+<div class="icon">👨‍🏫</div>
+<h1>Dr. Paul Antonio<br>Córdoba Mendoza</h1>
+<p>Sociólogo, investigador académico, columnista y candidato a Director del CRU Darién</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="profile-section">
+<div>
+<img src="../image/prncipal.png" alt="Dr. Paul Córdoba" class="profile-img">
+</div>
+<div>
+<h1 class="profile-name">Dr. Paul Antonio Córdoba Mendoza</h1>
+<div class="profile-role">Candidato a Director · CRU Darién</div>
+<p class="profile-text">El nombre Paul Córdoba en Panamá se asocia principalmente al Dr. Paul Antonio Córdoba Mendoza, un destacado sociólogo, investigador académico y columnista de opinión.</p>
+<p class="profile-text">Coordinador y Profesor del Departamento de Sociología de la Universidad de Panamá, especializado en investigación sobre desigualdad social. Ha liderado múltiples proyectos respaldados por la SENACYT y es autor de diversas publicaciones científicas.</p>
+</div>
+</div>
+
+<div class="facet-card">
+<h3>🔬 Trayectoria Académica e Investigación</h3>
+<ul>
+<li><strong>Coordinador y Profesor:</strong> Forma parte del Departamento de Sociología de la <a href="https://viceipup.up.ac.pa/gruposinvg/vista/catalogoview.php?gid=21" target="_blank">Universidad de Panamá</a>, especializándose en líneas de investigación sobre desigualdad social.</li>
+<li><strong>Investigador Científico:</strong> Ha liderado y colaborado en múltiples proyectos de investigación respaldados por la Secretaría Nacional de Ciencia, Tecnología e Innovación (<a href="https://conecto.senacyt.gob.pa/conecto/display/n22273" target="_blank">SENACYT</a>).</li>
+<li><strong>Estudios en Darién:</strong> Destaca como investigador principal en el proyecto de la Universidad Católica Santa María La Antigua (<a href="https://info.usma.ac.pa/usma-presenta-en-darien-los-resultados-del-proyecto-sobre-los-ultimos-pescadores-del-rio-tuira/" target="_blank">USMA</a>) titulado "Los últimos pescadores del río Tuira: producción estacionaria y cultura ribereña en Darién".</li>
+<li><strong>Publicaciones:</strong> Coautor de análisis científicos enfocados en la marginación socioeconómica y el impacto psicosocial o jurídico de medidas estatales (como las adoptadas durante el COVID-19).</li>
+</ul>
+</div>
+
+<div class="facet-card">
+<h3>✍️ Análisis Político y Opinión</h3>
+<ul>
+<li><strong>Columnista:</strong> Escribe artículos de análisis de coyuntura social y política en medios nacionales como <a href="https://www.laestrella.com.pa/autor/-/meta/paul-cordoba" target="_blank">La Estrella de Panamá</a>.</li>
+</ul>
+</div>
+
+<div class="facet-card">
+<h3>📖 Publicaciones Destacadas</h3>
+<ul>
+<li>Análisis sobre marginación socioeconómica en Panamá</li>
+<li>Impacto psicosocial y jurídico de medidas estatales durante el COVID-19</li>
+<li>"Los últimos pescadores del río Tuira: producción estacionaria y cultura ribereña en Darién"</li>
+</ul>
+</div>
+
+<div class="source-note">
+<strong>Referencias:</strong>
+<ol>
+<li><a href="https://viceipup.up.ac.pa/gruposinvg/vista/catalogoview.php?gid=21" target="_blank">Universidad de Panamá - Departamento de Sociología</a></li>
+<li><a href="https://conecto.senacyt.gob.pa/conecto/display/n22273" target="_blank">SENACYT - Proyectos de Investigación</a></li>
+<li><a href="https://info.usma.ac.pa/usma-presenta-en-darien-los-resultados-del-proyecto-sobre-los-ultimos-pescadores-del-rio-tuira/" target="_blank">USMA - Los últimos pescadores del río Tuira</a></li>
+<li><a href="https://speiro.usma.ac.pa/browse?type=author&value=Pa%C3%BAl+C%C3%B3rdoba" target="_blank">Repositorio USMA - Publicaciones</a></li>
+<li><a href="https://www.laestrella.com.pa/autor/-/meta/paul-cordoba" target="_blank">La Estrella de Panamá - Columnas</a></li>
+<li><a href="https://biblioteca.ined.ac.pa/cgi-bin/koha/opac-authoritiesdetail.pl?authid=12665" target="_blank">Biblioteca INED</a></li>
+</ol>
+</div>
+
+<a href="../index.html" class="back-home">← Volver al inicio</a>
+
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target)))},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>
