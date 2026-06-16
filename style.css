@@ -2464,8 +2464,9 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit;}
 
 .vg-grid{
     display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:1.5rem;
+    grid-template-columns:repeat(3, 1fr);
+    grid-auto-rows:260px;
+    gap:1.25rem;
     margin-top:2.5rem;
 }
 
@@ -2478,8 +2479,10 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit;}
     box-shadow:var(--shadow-lg);
 }
 
-.vg-featured .vg-card{ height:480px; }
-.vg-side .vg-card{ height:480px; }
+.vg-card.vg-big{
+    grid-column: span 2;
+    grid-row: span 2;
+}
 
 .vg-thumb{
     width:100%;
@@ -2558,7 +2561,8 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit;}
     margin:0 0 0.4rem;
     line-height:1.2;
 }
-.vg-side .vg-info h3{ font-size:1.1rem; }
+.vg-card:not(.vg-big) .vg-info h3{ font-size:1rem; }
+.vg-card:not(.vg-big) .vg-info p{ font-size:0.8rem; }
 
 .vg-info p{
     color:rgba(255,255,255,0.75);
@@ -2618,9 +2622,8 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit;}
 .vg-modal-close:hover{ background:rgba(255,255,255,0.3); }
 
 @media(max-width:768px){
-    .vg-grid{ grid-template-columns:1fr; }
-    .vg-featured .vg-card,
-    .vg-side .vg-card{ height:260px; }
+    .vg-grid{ grid-template-columns:1fr; grid-auto-rows:220px; }
+    .vg-card.vg-big{ grid-column:span 1; grid-row:span 1; }
     .vg-info h3{ font-size:1rem; }
     .vg-play-btn{ width:56px; height:56px; font-size:1.2rem; opacity:1; transform:translate(-50%,-50%) scale(1); }
 }
