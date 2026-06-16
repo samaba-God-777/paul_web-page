@@ -811,7 +811,10 @@ document.addEventListener('DOMContentLoaded', function(){
             document.body.style.overflow = 'hidden';
             modalVid.src = src;
             modalVid.load();
-            modalVid.play().catch(function(){});
+            modalVid.addEventListener('canplay', function onReady(){
+                modalVid.removeEventListener('canplay', onReady);
+                modalVid.play().catch(function(){});
+            });
         });
     });
 
