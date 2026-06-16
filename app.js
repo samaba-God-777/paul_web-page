@@ -788,33 +788,46 @@ init();
 });
 
 /* ── VIDEO GALLERY ── */
-(function(){
+document.addEventListener('DOMContentLoaded', function(){
     const modal    = document.getElementById('videoModal');
     const modalVid = document.getElementById('vgModalVideo');
     const closeBtn = document.getElementById('vgModalClose');
-    if(!modal) return;
+    if(!modal || !modalVid || !closeBtn) return;
 
-    document.querySelectorAll('.vg-card').forEach(card => {
-        const thumb = card.querySelector('.vg-thumb');
-        card.addEventListener('mouseenter', () => { if(thumb) thumb.play().catch(()=>{}); });
-        card.addEventListener('mouseleave', () => { if(thumb){ thumb.pause(); thumb.currentTime=0; } });
-        card.addEventListener('click', () => {
-            const src = card.dataset.src;
+    document.querySelectorAll('.vg-card').forEach(function(card){
+        var thumb = card.querySelector('.vg-thumb');
+
+        card.addEventListener('mouseenter', function(){
+            if(thumb) thumb.play().catch(function(){});
+        });
+        card.addEventListener('mouseleave', function(){
+            if(thumb){ thumb.pause(); thumb.currentTime = 0; }
+        });
+
+        card.addEventListener('click', function(){
+            var src = card.getAttribute('data-src');
             if(!src) return;
-            modalVid.src = src;
-            modal.classList.add('open');
+            modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
+            modalVid.src = src;
+            modalVid.load();
+            modalVid.play().catch(function(){});
         });
     });
 
     function closeModal(){
-        modal.classList.remove('open');
+        modal.style.display = 'none';
         modalVid.pause();
-        modalVid.src = '';
+        modalVid.removeAttribute('src');
+        modalVid.load();
         document.body.style.overflow = '';
     }
 
     closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', e => { if(e.target === modal) closeModal(); });
-    document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
-})();
+    modal.addEventListener('click', function(e){
+        if(e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape') closeModal();
+    });
+});
