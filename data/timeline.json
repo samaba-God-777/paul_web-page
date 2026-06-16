@@ -1,38 +1,44 @@
 [
   {
-    "year": 2026,
-    "title": "Diagnóstico y Planeación",
-    "description": "Evaluación integral de la infraestructura, diseño del plan estratégico y conformación de mesas de trabajo con la comunidad universitaria.",
+    "year": "Días 1–30",
+    "title": "Comisiones Estratégicas",
+    "description": "Designación de coordinadores por eje estratégico, elaboración de planes operativos iniciales y definición de metas e indicadores de seguimiento.",
     "icon": "📋"
   },
   {
-    "year": 2027,
-    "title": "Modernización Inicial",
-    "description": "Inicio de la modernización de laboratorios, implementación de plataformas TIC y primeros convenios internacionales.",
-    "icon": "🚀"
+    "year": "Días 1–45",
+    "title": "Diagnóstico Participativo",
+    "description": "Reuniones con estudiantes, docentes y administrativos. Encuestas de satisfacción institucional y levantamiento de necesidades de infraestructura.",
+    "icon": "🔍"
   },
   {
-    "year": 2028,
-    "title": "Expansión Académica",
-    "description": "Apertura de nuevos programas académicos, consolidación de redes científicas y fortalecimiento de la investigación aplicada.",
+    "year": "Días 30–60",
+    "title": "Biblioteca y Recursos Académicos",
+    "description": "Evaluación del fondo bibliográfico, gestión de nuevas adquisiciones físicas y digitales, y fortalecimiento del acceso a bases de datos académicas.",
     "icon": "📚"
   },
   {
-    "year": 2029,
-    "title": "Vinculación Territorial",
-    "description": "Ampliación de programas de extensión comunitaria, proyectos de desarrollo regional y pasantías internacionales masivas.",
-    "icon": "🤲"
+    "year": "Días 30–60",
+    "title": "Convenios y Alianzas Estratégicas",
+    "description": "Identificación de instituciones para cooperación, revisión de convenios existentes y gestión de acuerdos con organismos nacionales e internacionales.",
+    "icon": "🌍"
   },
   {
-    "year": 2030,
-    "title": "Consolidación y Autogestión",
-    "description": "Fortalecimiento de la autogestión financiera, proyectos sostenibles y posicionamiento nacional e internacional.",
+    "year": "Días 45–75",
+    "title": "Bienestar Estudiantil",
+    "description": "Diagnóstico de necesidades estudiantiles, fortalecimiento de orientación y apoyo psicológico, y organización de actividades deportivas y culturales.",
+    "icon": "🎭"
+  },
+  {
+    "year": "Días 60–90",
+    "title": "Modernización Tecnológica",
+    "description": "Inventario y evaluación de equipos, diagnóstico de conectividad institucional, priorización de inversiones tecnológicas y capacitación a docentes y administrativos.",
+    "icon": "💻"
+  },
+  {
+    "year": "Día 100",
+    "title": "Rendición Pública de Avances",
+    "description": "Presentación pública del cronograma, primer informe trimestral de avance y activación de mecanismos de retroalimentación con la comunidad universitaria.",
     "icon": "🏆"
-  },
-  {
-    "year": 2031,
-    "title": "Universidad de Excelencia",
-    "description": "Meta alcanzada: una universidad inclusiva, moderna, innovadora y plenamente comprometida con el desarrollo del Darién.",
-    "icon": "🎓"
   }
 ]

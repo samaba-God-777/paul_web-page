@@ -1,34 +1,34 @@
 {
   "goals": [
     {
-      "id": "personas",
-      "label": "Personas Beneficiadas",
+      "id": "convenios",
+      "label": "Convenios Activos",
       "value": 10,
-      "icon": "👥",
-      "suffix": "+",
+      "icon": "🤝",
+      "suffix": "",
       "page": "pages/meta-personas.html"
     },
     {
-      "id": "comunidades",
-      "label": "Comunidades Atendidas",
-      "value": 6,
-      "icon": "🏘️",
-      "suffix": "",
-      "page": "pages/meta-comunidades.html"
-    },
-    {
       "id": "extension",
-      "label": "Proyectos de Extensión",
-      "value": 7,
+      "label": "Programas de Extensión",
+      "value": 2,
       "icon": "🌱",
       "suffix": "",
       "page": "pages/meta-extension.html"
     },
     {
-      "id": "voluntarios",
-      "label": "Voluntarios Activos",
-      "value": 8,
-      "icon": "🤝",
+      "id": "investigacion",
+      "label": "Proyectos de Investigación",
+      "value": 10,
+      "icon": "🔬",
+      "suffix": "",
+      "page": "pages/meta-comunidades.html"
+    },
+    {
+      "id": "publicaciones",
+      "label": "Publicaciones Académicas",
+      "value": 10,
+      "icon": "📝",
       "suffix": "",
       "page": "pages/meta-voluntarios.html"
     }
