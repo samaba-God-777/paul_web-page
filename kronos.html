@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KØ// — Kronos Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: #030303;
+      color: #f4f4f5;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    .font-display { font-family: 'Syne', sans-serif; }
+
+    .bento-item {
+      background: linear-gradient(135deg, rgba(24,24,27,0.7) 0%, rgba(9,9,11,0.9) 100%);
+      border: 1px solid rgba(255,255,255,0.03);
+      backdrop-filter: blur(20px);
+      transition: all 0.6s cubic-bezier(0.16,1,0.3,1);
+    }
+    .bento-item:hover {
+      border-color: rgba(6,182,212,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 30px 60px -15px rgba(0,0,0,0.8), 0 0 50px -10px rgba(6,182,212,0.05);
+    }
+    .bento-img {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      filter: grayscale(1);
+      opacity: 0.1;
+      transition: all 1s ease;
+    }
+    .bento-item:hover .bento-img { transform: scale(1.05); opacity: 0.2; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #030303; }
+    ::-webkit-scrollbar-thumb { background: #27272a; }
+    ::-webkit-scrollbar-thumb:hover { background: #06b6d4; }
+
+    .dot-ping {
+      animation: ping 1s cubic-bezier(0,0,0.2,1) infinite;
+    }
+    @keyframes ping {
+      75%, 100% { transform: scale(2); opacity: 0; }
+    }
+
+    #navbar {
+      position: fixed; left: 0; top: 0; z-index: 50;
+      width: 100%;
+      border-bottom: 1px solid transparent;
+      padding: 2rem 5rem;
+      transition: all 0.5s ease;
+      font-family: 'Syne', sans-serif;
+    }
+    #navbar.scrolled {
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(12px);
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom-color: rgba(255,255,255,0.05);
+    }
+
+    @media (max-width: 768px) {
+      #navbar { padding: 1.5rem 1.5rem; }
+      #navbar.scrolled { padding-top: 1rem; padding-bottom: 1rem; }
+    }
+
+    .lab-btn { cursor: pointer; }
+    .lab-btn.active {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.1) !important;
+      color: white;
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden bg-[#030303] text-[#f4f4f5] selection:bg-cyan-500 selection:text-black">
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div style="max-width:1600px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
+      <a href="#" style="display:flex;align-items:center;gap:1rem;text-decoration:none;">
+        <span class="font-display text-2xl font-black tracking-tighter uppercase text-white">KØ//</span>
+      </a>
+      <div class="hidden md:flex items-center gap-16 font-display text-[11px] font-medium uppercase tracking-[0.35em] text-white">
+        <a href="#vision" class="transition-colors hover:text-cyan-400 text-white no-underline">Vision</a>
+        <a href="#works"  class="transition-colors hover:text-cyan-400 text-white no-underline">Works</a>
+        <a href="#telemetry" class="transition-colors hover:text-cyan-400 text-white no-underline">Telemetry</a>
+        <a href="#lab" class="transition-colors hover:text-cyan-400 text-white no-underline">Lab Workspace</a>
+      </div>
+      <a href="#connect" class="bg-white px-6 py-3.5 font-display text-[11px] font-bold uppercase tracking-[0.35em] text-black transition-colors hover:bg-cyan-400 no-underline">
+        Initialize
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header style="position:relative;display:flex;height:100vh;width:100%;align-items:center;overflow:hidden;">
+    <!-- Video background -->
+    <div style="position:absolute;inset:0;z-index:0;height:100%;width:100%;">
+      <video autoplay loop muted playsinline style="height:100%;width:100%;object-fit:cover;">
+        <source src="video/video.mp4" type="video/mp4" />
+      </video>
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,#030303,rgba(3,3,3,0.7),transparent);"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,#030303,transparent,rgba(3,3,3,0.4));"></div>
+    </div>
+
+    <div style="position:relative;z-index:10;margin:0 auto;width:100%;max-width:1600px;padding:0 5rem;display:grid;grid-template-columns:1fr;gap:3rem;align-items:center;">
+      <div style="max-width:900px;">
+        <h1 class="font-display font-black uppercase text-white" style="font-size:clamp(3rem,8vw,8rem);line-height:0.95;letter-spacing:-0.02em;margin:0 0 2rem;">
+          Spaces <br/>
+          <span style="background:linear-gradient(to right,#22d3ee,#99f6e4,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">That Breathe.</span>
+        </h1>
+        <p class="font-light" style="max-width:36rem;font-size:1.1rem;line-height:1.8;color:white;text-shadow:0 0 8px rgba(0,0,0,1),0 0 16px rgba(0,0,0,0.9),0 0 32px rgba(0,0,0,0.6);margin:0 0 2.5rem;">
+          We engineer physical landscapes governed by digital frameworks. Discover high-fidelity speculative installations designed for radical isolation, planetary transcendence, and extreme permanence.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;">
+          <a href="#works" class="font-display font-bold uppercase tracking-[0.35em] text-black" style="background:linear-gradient(to right,#06b6d4,#2563eb);padding:1.25rem 2rem;font-size:0.7rem;text-decoration:none;box-shadow:0 10px 30px rgba(6,182,212,0.2);transition:filter 0.2s;" onmouseover="this.style.filter='brightness(1.1)'" onmouseout="this.style.filter=''">
+            Explore Showcases
+          </a>
+          <a href="#vision" class="font-display font-medium uppercase tracking-[0.35em] text-white" style="border:1px solid rgba(255,255,255,0.1);padding:1.25rem 2rem;font-size:0.7rem;text-decoration:none;backdrop-filter:blur(12px);transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+            Read Philosophy
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="font-display uppercase text-zinc-200" style="position:absolute;bottom:3rem;left:5rem;z-index:20;display:flex;align-items:center;gap:3rem;font-size:0.625rem;letter-spacing:0.35em;">
+      <div>[ ARCH TYPE : SPECULATIVE ]</div>
+      <div>[ COORD : 77.0092° N ]</div>
+    </div>
+  </header>
+
+  <!-- VISION -->
+  <section id="vision" style="position:relative;max-width:1600px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.05);padding:10rem 5rem;">
+    <div style="display:grid;align-items:start;gap:4rem;grid-template-columns:1fr 2fr;">
+      <div style="position:sticky;top:8rem;">
+        <h2 class="font-display font-black uppercase text-white" style="font-size:clamp(2rem,4vw,3.5rem);line-height:1;margin:0 0 1.5rem;">The Framework Manifesto</h2>
+        <p class="font-light" style="line-height:1.8;color:white;">
+          Traditional design binds structure to coordinates. We design spaces that fluctuate dynamically with environmental parameters, transforming walls into environmental monitors and structures into alive objects.
+        </p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;" id="vision-cards"></div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section id="works" style="position:relative;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);background:#09090b;padding:10rem 0;">
+    <div style="max-width:1600px;margin:0 auto;padding:0 5rem;">
+      <div style="margin-bottom:5rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:2rem;">
+        <h2 class="font-display font-black uppercase text-white" style="font-size:clamp(2rem,5vw,4.5rem);line-height:1;margin:0;">Selected Render Modules</h2>
+        <div class="font-display uppercase" style="display:flex;gap:1rem;font-size:0.625rem;letter-spacing:0.35em;color:white;">
+          <button style="border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);padding:0.5rem 1rem;color:white;cursor:pointer;">All Files</button>
+          <button style="border:1px solid rgba(255,255,255,0.05);padding:0.5rem 1rem;color:white;cursor:pointer;background:transparent;" onmouseover="this.style.borderColor='rgba(255,255,255,0.2)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'">Monolithic</button>
+          <button style="border:1px solid rgba(255,255,255,0.05);padding:0.5rem 1rem;color:white;cursor:pointer;background:transparent;" onmouseover="this.style.borderColor='rgba(255,255,255,0.2)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'">Subterranean</button>
+        </div>
+      </div>
+      <div id="portfolio-grid" style="display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem;"></div>
+    </div>
+  </section>
+
+  <!-- TELEMETRY -->
+  <section id="telemetry" style="position:relative;max-width:1600px;margin:0 auto;padding:10rem 5rem;">
+    <div style="display:grid;align-items:center;gap:4rem;grid-template-columns:5fr 7fr;">
+      <div>
+        <h2 class="font-display font-black uppercase text-white" style="font-size:clamp(2rem,3.5vw,3.5rem);line-height:1;margin:0 0 2rem;">Active Environmental Nodes</h2>
+        <p class="font-light" style="line-height:1.8;color:white;margin-bottom:2rem;">
+          Track the structural deployment parameters across our global specimen fields. These modules report environmental density vectors, local wind coefficients, and system autonomy health values.
+        </p>
+        <div id="telemetry-nodes" style="display:flex;flex-direction:column;gap:1rem;"></div>
+      </div>
+      <div style="position:relative;overflow:hidden;border:1px solid rgba(255,255,255,0.1);background:linear-gradient(135deg,rgba(39,39,42,0.4),black);padding:3rem;backdrop-filter:blur(12px);">
+        <div class="font-mono" style="position:absolute;right:0;top:0;padding:1rem;font-size:0.5625rem;color:#52525b;">SYS_DIAG_V4.0</div>
+        <h3 class="font-display font-bold uppercase tracking-wider text-white" style="display:flex;align-items:center;gap:0.75rem;font-size:1.1rem;margin:0 0 2rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M20 15h2"/></svg>
+          Spatial Simulation Readout
+        </h3>
+        <div style="display:flex;flex-direction:column;gap:1.5rem;">
+          <div>
+            <div class="font-mono" style="display:flex;justify-content:space-between;font-size:0.75rem;color:white;margin-bottom:0.5rem;">
+              <span>ATMOSPHERIC ISOLATION INDEX</span><span style="color:#22d3ee;">87%</span>
+            </div>
+            <div style="height:6px;width:100%;overflow:hidden;border-radius:999px;background:#27272a;">
+              <div style="height:100%;width:87%;border-radius:999px;background:linear-gradient(to right,#06b6d4,#3b82f6);"></div>
+            </div>
+          </div>
+          <div>
+            <div class="font-mono" style="display:flex;justify-content:space-between;font-size:0.75rem;color:white;margin-bottom:0.5rem;">
+              <span>STRUCTURAL INTEGRITY COEFFICIENT</span><span>94.2%</span>
+            </div>
+            <div style="height:6px;width:100%;overflow:hidden;border-radius:999px;background:#27272a;">
+              <div style="height:100%;width:94.2%;border-radius:999px;background:linear-gradient(to right,#10b981,#14b8a6);"></div>
+            </div>
+          </div>
+          <div>
+            <div class="font-mono" style="display:flex;justify-content:space-between;font-size:0.75rem;color:white;margin-bottom:0.5rem;">
+              <span>LIGHT REGISTRATION DEPTH</span><span>BORTLE 1</span>
+            </div>
+            <div style="height:6px;width:100%;overflow:hidden;border-radius:999px;background:#27272a;">
+              <div style="height:100%;width:100%;border-radius:999px;background:linear-gradient(to right,#a855f7,#ec4899);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="font-mono" style="margin-top:3rem;border-radius:4px;border:1px solid rgba(255,255,255,0.05);background:rgba(255,255,255,0.05);padding:1rem;font-size:0.6875rem;line-height:1.8;color:white;">
+          <span style="color:#22d3ee;">SYSTEM LOG:</span> Speculative vector sequences have initialized cleanly. Structural modules maintain load-bearing optimization against atmospheric cross-winds. Ready for external deployment simulation sequences.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAB -->
+  <section id="lab" style="position:relative;border-top:1px solid rgba(255,255,255,0.05);background:#09090b;padding:10rem 0;">
+    <div style="max-width:56rem;margin:0 auto;padding:0 2rem;text-align:center;">
+      <h2 class="font-display font-black uppercase text-white" style="font-size:clamp(2rem,5vw,3.5rem);margin:0 0 1.5rem;">Lab Space Parameters</h2>
+      <p class="font-light" style="max-width:36rem;margin:0 auto 3rem;font-size:0.9rem;line-height:1.8;color:white;">
+        Alter the parameters below to test structural adaptability thresholds across virtual environment configurations.
+      </p>
+      <div id="lab-controls" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;border:1px solid rgba(255,255,255,0.05);background:rgba(0,0,0,0.4);padding:2rem;text-align:left;margin-bottom:2rem;"></div>
+      <div class="font-mono" style="border:1px dashed #3f3f46;background:rgba(39,39,42,0.3);padding:1.5rem;font-size:0.75rem;color:#71717a;">
+        CALCULATED VECTOR SPECIFICATION: <span id="vector-spec" style="color:white;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section id="connect" style="position:relative;max-width:1600px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.05);padding:10rem 5rem;">
+    <div style="display:grid;align-items:center;gap:4rem;grid-template-columns:1fr 1fr;">
+      <div>
+        <h2 class="font-display font-black uppercase text-white" style="font-size:clamp(2rem,5vw,4rem);line-height:1;margin:0 0 1.5rem;">Initiate Core Spatial Brief</h2>
+        <p class="font-light" style="max-width:28rem;line-height:1.8;color:white;">
+          Submit your parameters to request vector files, blueprint readouts, or spatial engineering collaboration sequences.
+        </p>
+      </div>
+      <div style="position:relative;border:1px solid rgba(255,255,255,0.05);background:rgba(39,39,42,0.1);padding:3rem;">
+        <form id="contact-form">
+          <div style="margin-bottom:2rem;">
+            <input type="text" required placeholder="IDENTITY / COMPANY" class="font-mono" style="width:100%;border:none;border-bottom:1px solid #27272a;background:transparent;padding:1rem 0;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:white;outline:none;" onfocus="this.style.borderBottomColor='#22d3ee'" onblur="this.style.borderBottomColor='#27272a'" />
+          </div>
+          <div style="margin-bottom:2rem;">
+            <input type="email" required placeholder="SECURE_COMMUNICATION_ROUTE@HOST" class="font-mono" style="width:100%;border:none;border-bottom:1px solid #27272a;background:transparent;padding:1rem 0;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:white;outline:none;" onfocus="this.style.borderBottomColor='#22d3ee'" onblur="this.style.borderBottomColor='#27272a'" />
+          </div>
+          <div style="margin-bottom:2rem;">
+            <textarea rows="3" placeholder="PROJECT PARAMETERS AND COORD BRIEF" class="font-mono" style="width:100%;border:none;border-bottom:1px solid #27272a;background:transparent;padding:1rem 0;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:white;outline:none;resize:none;" onfocus="this.style.borderBottomColor='#22d3ee'" onblur="this.style.borderBottomColor='#27272a'"></textarea>
+          </div>
+          <button type="submit" class="font-display font-bold uppercase tracking-[0.35em]" style="width:100%;background:white;padding:1.25rem;font-size:0.75rem;color:black;border:none;cursor:pointer;transition:background 0.2s;" onmouseover="this.style.background='#22d3ee'" onmouseout="this.style.background='white'">
+            Broadcast Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top:1px solid rgba(255,255,255,0.05);background:black;padding:5rem;font-size:0.75rem;color:#52525b;font-family:monospace;">
+    <div style="max-width:1600px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:3rem;">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:2rem;">
+        <span class="font-display font-black uppercase text-white" style="font-size:1.2rem;letter-spacing:-0.05em;">KØ//</span>
+        <span>&copy; 2026 KRONOS LABS INC. SPECULATIVE ARCHITECTURE SYNTHESIS.</span>
+      </div>
+      <div style="display:flex;gap:2rem;font-size:0.625rem;letter-spacing:0.1em;text-transform:uppercase;color:#71717a;">
+        <a href="#" style="color:inherit;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#71717a'">DIAGNOSTICS</a>
+        <a href="#" style="color:inherit;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#71717a'">CORE_API</a>
+        <a href="#" style="color:inherit;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#71717a'">NETWORK_LEGAL</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────
+const visionCards = [
+  { number: "01 /", title: "Morphological Hardening", text: "Using smart crystalline matrix materials to build adaptive barriers that strengthen when subjected to intense structural pressure or atmospheric fluctuations." },
+  { number: "02 /", title: "Chronos Mapping", text: "Structural layouts engineered around chronological solar trajectories, ensuring internal lighting balances adapt instantly across shifting seasonal matrices." },
+  { number: "03 /", title: "Passive Isolation Nodes", text: "Acoustic and electromagnetic shield layers implemented natively into spatial framing blocks to offer complete offline containment units." },
+  { number: "04 /", title: "Generative Synthesis", text: "Algorithmic architectural generation parameters customized dynamically via connected data nodes before actual hardware modular structural assembly." },
+];
+
+const portfolioCards = [
+  { code: "[ DES-MOD // 09 ]", title: "Colosseum Engineering & Empire Dynamics", text: "An extreme scale computational model merging classical stadium geometries with speculative floating acoustic ring elements designed for open plains.", tags: ["Solaris-Linked", "Concrete Poly"], image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop", colSpan: 8 },
+  { code: "[ DES-MOD // 12 ]", title: "Adaptive High Fidelity Architecture", text: "Ultra minimalist living system using smart carbon compounds responding to wind vectors.", tags: ["Kinetic"], image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=800&auto=format&fit=crop", colSpan: 4 },
+  { code: "[ DES-MOD // 14 ]", title: "Radically Different Banking Vaults", text: "Subterranean physical node structures engineered inside hyper-isolated granite formations.", tags: ["Crypto-Dense"], image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop", colSpan: 4 },
+  { code: "[ DES-MOD // 21 ]", title: "Living Architecture & Atmospheric Observatories", text: "High altitude habitats matching cloud formations, providing absolute visual synthesis between users and planetary upper horizons.", tags: ["Bortle-Class 1", "Titanium Matrix"], image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1200&auto=format&fit=crop", colSpan: 8 },
+];
+
+const telemetryNodes = [
+  { label: "Node Alpha (Atacama)", status: "ONLINE // 99.4%", color: "#34d399", ping: true },
+  { label: "Node Beta (Svalbard)", status: "ONLINE // 98.1%", color: "#34d399", ping: true },
+  { label: "Node Gamma (Altiplano)", status: "CALIBRATING", color: "#22d3ee", ping: false },
+];
+
+const labOptions = {
+  alt: { label: "Altitude Layer", options: ["Low", "Mid", "Extreme"] },
+  mat: { label: "Material Core", options: ["Poly", "Titanium"] },
+  shd: { label: "Shielding Matrix", options: ["Active", "Null"] },
+};
+
+// ── STATE ─────────────────────────────────────────────────────
+const params = { alt: "Low", mat: "Poly", shd: "Active" };
+
+// ── RENDER VISION CARDS ───────────────────────────────────────
+const visionGrid = document.getElementById('vision-cards');
+visionCards.forEach(item => {
+  visionGrid.innerHTML += `
+    <div style="border:1px solid rgba(255,255,255,0.05);background:rgba(39,39,42,0.2);padding:3rem;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(39,39,42,0.8)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'">
+      <span class="font-display font-black" style="display:block;font-size:3rem;color:#27272a;margin-bottom:2rem;">${item.number}</span>
+      <h3 class="font-display font-bold uppercase text-white" style="font-size:1.1rem;margin:0 0 2rem;">${item.title}</h3>
+      <p class="font-light" style="font-size:0.875rem;line-height:1.8;color:white;">${item.text}</p>
+    </div>`;
+});
+
+// ── RENDER PORTFOLIO ──────────────────────────────────────────
+const portfolioGrid = document.getElementById('portfolio-grid');
+portfolioCards.forEach(card => {
+  const tags = card.tags.map(t => `<span style="border:1px solid rgba(255,255,255,0.1);padding:0.25rem 0.5rem;">${t}</span>`).join('');
+  portfolioGrid.innerHTML += `
+    <div class="bento-item" style="position:relative;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:3rem;min-height:500px;grid-column:span ${card.colSpan};">
+      <div class="bento-img" style="background-image:url('${card.image}');"></div>
+      <div style="position:relative;z-index:10;display:flex;align-items:flex-start;justify-content:space-between;">
+        <span class="font-mono" style="font-size:0.75rem;letter-spacing:0.1em;color:#22d3ee;">${card.code}</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52525b" stroke-width="1.5" class="card-arrow" style="transition:all 0.5s;"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </div>
+      <div style="position:relative;z-index:10;max-width:36rem;">
+        <h3 class="font-display font-black uppercase text-white" style="font-size:clamp(1.5rem,2.5vw,2.25rem);letter-spacing:-0.02em;margin:0 0 1rem;">${card.title}</h3>
+        <p class="font-light" style="font-size:0.875rem;color:white;margin:0 0 1.5rem;">${card.text}</p>
+        <div class="font-mono" style="display:flex;flex-wrap:wrap;gap:0.75rem;font-size:0.5625rem;letter-spacing:0.1em;text-transform:uppercase;color:#52525b;">${tags}</div>
+      </div>
+    </div>`;
+});
+
+// Arrow hover effect
+document.querySelectorAll('.bento-item').forEach(el => {
+  const arrow = el.querySelector('.card-arrow');
+  el.addEventListener('mouseenter', () => { if(arrow) { arrow.style.stroke = '#22d3ee'; arrow.style.transform = 'rotate(45deg)'; } });
+  el.addEventListener('mouseleave', () => { if(arrow) { arrow.style.stroke = '#52525b'; arrow.style.transform = ''; } });
+});
+
+// ── RENDER TELEMETRY ──────────────────────────────────────────
+const telDiv = document.getElementById('telemetry-nodes');
+telemetryNodes.forEach(node => {
+  telDiv.innerHTML += `
+    <div style="display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(255,255,255,0.05);background:rgba(39,39,42,0.1);padding:1rem;">
+      <span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:white;">${node.label}</span>
+      <span class="font-mono" style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:${node.color};">
+        <span style="position:relative;display:inline-block;width:6px;height:6px;border-radius:50%;background:${node.color};${node.ping ? 'animation:ping 1.2s ease infinite;' : ''}"></span>
+        ${node.status}
+      </span>
+    </div>`;
+});
+
+// ── RENDER LAB ────────────────────────────────────────────────
+function updateVector() {
+  document.getElementById('vector-spec').textContent =
+    `${params.alt.toUpperCase()}_${params.mat.toUpperCase()}_${params.shd.toUpperCase()}_CORE`;
+}
+
+const labGrid = document.getElementById('lab-controls');
+Object.entries(labOptions).forEach(([key, cfg]) => {
+  const btns = cfg.options.map(opt => `
+    <button class="lab-btn font-mono ${params[key] === opt ? 'active' : ''}" data-key="${key}" data-val="${opt}"
+      style="padding:0.375rem 0.75rem;font-size:0.6875rem;border:1px solid rgba(255,255,255,0.05);background:transparent;color:${params[key] === opt ? 'white' : '#71717a'};cursor:pointer;transition:all 0.2s;">
+      ${opt}
+    </button>`).join('');
+  labGrid.innerHTML += `
+    <div>
+      <label class="font-display" style="display:block;font-size:0.625rem;text-transform:uppercase;letter-spacing:0.1em;color:white;margin-bottom:0.75rem;">${cfg.label}</label>
+      <div style="display:flex;gap:0.5rem;">${btns}</div>
+    </div>`;
+});
+updateVector();
+
+document.getElementById('lab-controls').addEventListener('click', e => {
+  const btn = e.target.closest('.lab-btn');
+  if (!btn) return;
+  const key = btn.dataset.key;
+  const val = btn.dataset.val;
+  params[key] = val;
+  // Update button states
+  document.querySelectorAll(`.lab-btn[data-key="${key}"]`).forEach(b => {
+    const isActive = b.dataset.val === val;
+    b.style.background = isActive ? 'rgba(255,255,255,0.1)' : 'transparent';
+    b.style.borderColor = isActive ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.05)';
+    b.style.color = isActive ? 'white' : '#71717a';
+  });
+  updateVector();
+});
+
+// ── NAV SCROLL ────────────────────────────────────────────────
+const nav = document.getElementById('navbar');
+function updateNav() {
+  if (window.scrollY > 60) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+}
+updateNav();
+window.addEventListener('scroll', updateNav, { passive: true });
+
+// ── FORM ──────────────────────────────────────────────────────
+document.getElementById('contact-form').addEventListener('submit', e => {
+  e.preventDefault();
+  alert('Broadcasting telemetry signal request packet downrange... Connection successful.');
+});
+
+// ── INPUT PLACEHOLDER COLOR ───────────────────────────────────
+const style = document.createElement('style');
+style.textContent = `
+  input::placeholder, textarea::placeholder { color: #3f3f46; }
+  a { text-decoration: none; }
+  @media (max-width: 768px) {
+    #portfolio-grid > div { grid-column: span 12 !important; }
+    #vision section > div { grid-template-columns: 1fr !important; }
+    #lab-controls { grid-template-columns: 1fr !important; }
+  }
+`;
+document.head.appendChild(style);
+</script>
+</body>
+</html>
