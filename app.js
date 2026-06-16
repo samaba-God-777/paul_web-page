@@ -646,4 +646,47 @@ init();
     tick();
 })();
 
+/* =============================================
+   HERO SCROLL ORBIT ANIMATION
+   ============================================= */
+(function initScrollOrbit(){
+    const nodes   = Array.from({length:8}, (_,i) => document.getElementById('oNode'+i));
+    const outer   = document.getElementById('orbitOuter');
+    const middle  = document.getElementById('orbitMiddle');
+
+    // Angles evenly spaced around a circle (matching React component)
+    const ANGLES = [
+        0,
+        Math.PI / 4,
+        Math.PI / 2,
+        (3 * Math.PI) / 4,
+        Math.PI,
+        (5 * Math.PI) / 4,
+        (3 * Math.PI) / 2,
+        (7 * Math.PI) / 4
+    ];
+
+    // On mobile the orbit is scaled down, so use a smaller expansion radius
+    function maxRadius(){ return window.innerWidth < 769 ? 150 : 300; }
+
+    function update(){
+        const scrollY   = window.scrollY;
+        const progress  = Math.min(scrollY / 500, 1);
+        const radius    = progress * maxRadius();
+
+        nodes.forEach(function(node, i){
+            if(!node) return;
+            const x = radius * Math.cos(ANGLES[i]);
+            const y = radius * Math.sin(ANGLES[i]);
+            node.style.transform = 'translate(' + x.toFixed(2) + 'px,' + y.toFixed(2) + 'px)';
+        });
+
+        if(outer)  outer.classList.toggle('ring-on',  scrollY > 300);
+        if(middle) middle.classList.toggle('ring-on', scrollY > 100);
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+})();
+
 });
