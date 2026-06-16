@@ -1,32 +1,29 @@
 [
-  {
-    "id": 4,
-    "src": "image/flyer_1.jpeg",
-    "alt": "Evento académico",
-    "category": "eventos"
-  },
-  {
-    "id": 5,
-    "src": "image/flyer_2.jpeg",
-    "alt": "Actividades universitarias",
-    "category": "eventos"
-  },
-  {
-    "id": 6,
-    "src": "image/WhatsApp%20Image%202026-06-01%20at%2010.36.14.jpeg",
-    "alt": "Comunidad universitaria",
-    "category": "comunidad"
-  },
-  {
-    "id": 7,
-    "src": "image/WhatsApp%20Image%202026-06-02%20at%2013.56.48.jpeg",
-    "alt": "Estudiantes en actividad",
-    "category": "estudiantes"
-  },
-  {
-    "id": 9,
-    "src": "image/flyer_2.jpeg",
-    "alt": "Conferencia institucional",
-    "category": "eventos"
-  }
+  { "id": 1,  "src": "image/flyer_1.jpeg",                                                          "alt": "Evento académico",              "category": "eventos"    },
+  { "id": 2,  "src": "image/flyer_2.jpeg",                                                          "alt": "Actividades universitarias",    "category": "eventos"    },
+  { "id": 3,  "src": "image/WhatsApp%20Image%202026-06-01%20at%2010.36.14.jpeg",                    "alt": "Comunidad universitaria",       "category": "comunidad"  },
+  { "id": 4,  "src": "image/WhatsApp%20Image%202026-06-02%20at%2013.56.48.jpeg",                    "alt": "Estudiantes en actividad",      "category": "estudiantes"},
+  { "id": 5,  "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.30.49.jpeg",                    "alt": "Equipo de trabajo",             "category": "equipo"     },
+  { "id": 6,  "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.30.49%20(1).jpeg",              "alt": "Liderazgo universitario",       "category": "liderazgo"  },
+  { "id": 7,  "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.30.49%20(2).jpeg",              "alt": "Reunión institucional",         "category": "eventos"    },
+  { "id": 8,  "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.30.50.jpeg",                    "alt": "Actividad comunitaria",         "category": "comunidad"  },
+  { "id": 9,  "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.31.03.jpeg",                    "alt": "Equipo CRU Darién",             "category": "equipo"     },
+  { "id": 10, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.31.03%20(1).jpeg",              "alt": "Liderazgo estudiantil",         "category": "liderazgo"  },
+  { "id": 11, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.31.03%20(2).jpeg",              "alt": "Encuentro académico",           "category": "eventos"    },
+  { "id": 12, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.31.03%20(3).jpeg",              "alt": "Comunidad estudiantil",         "category": "estudiantes"},
+  { "id": 13, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.31.03%20(4).jpeg",              "alt": "Participación universitaria",   "category": "comunidad"  },
+  { "id": 14, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.31.03%20(5).jpeg",              "alt": "Actividad del equipo",          "category": "equipo"     },
+  { "id": 15, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.31.04.jpeg",                    "alt": "Momento institucional",         "category": "liderazgo"  },
+  { "id": 16, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.32.20.jpeg",                    "alt": "Evento estudiantil",            "category": "estudiantes"},
+  { "id": 17, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.32.20%20(1).jpeg",              "alt": "Encuentro comunitario",         "category": "comunidad"  },
+  { "id": 18, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.32.20%20(2).jpeg",              "alt": "Vida universitaria",            "category": "estudiantes"},
+  { "id": 19, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.32.20%20(3).jpeg",              "alt": "Gestión académica",             "category": "liderazgo"  },
+  { "id": 20, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.32.20%20(4).jpeg",              "alt": "Trabajo en equipo",             "category": "equipo"     },
+  { "id": 21, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.32.20%20(5).jpeg",              "alt": "Actividad académica",           "category": "eventos"    },
+  { "id": 22, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.32.21.jpeg",                    "alt": "Comunidad CRU Darién",          "category": "comunidad"  },
+  { "id": 23, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.32.21%20(1).jpeg",              "alt": "Liderazgo y visión",            "category": "liderazgo"  },
+  { "id": 24, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.32.21%20(2).jpeg",              "alt": "Estudiantes comprometidos",     "category": "estudiantes"},
+  { "id": 25, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.32.21%20(3).jpeg",              "alt": "Equipo de trabajo",             "category": "equipo"     },
+  { "id": 26, "src": "image/WhatsApp%20Image%202026-06-15%20at%2019.32.21%20(4).jpeg",              "alt": "Evento universitario",          "category": "eventos"    },
+  { "id": 27, "src": "image/darien.jpg",                                                             "alt": "Provincia de Darién",           "category": "comunidad"  }
 ]

@@ -473,4 +473,177 @@ async function init(){
 }
 
 init();
+
+// ==========================================
+// SPHERE IMAGE GALLERY
+// ==========================================
+(async function initSphere(){
+    const container = document.getElementById('sphereContainer');
+    if(!container) return;
+
+    // Load gallery images
+    let images = [];
+    try {
+        const res = await fetch('data/gallery.json');
+        images = await res.json();
+    } catch(e){ return; }
+
+    // Config
+    const SIZE     = container.offsetWidth || 600;
+    const RADIUS   = SIZE * 0.34;
+    const IMG_SIZE = SIZE * 0.135;
+    const AUTO_SPEED = 0.18;
+    const DRAG_SENSITIVITY = 0.5;
+    const MOMENTUM_DECAY   = 0.94;
+
+    // Duplicate images to fill sphere (need ~30-40 nodes)
+    const nodes = [];
+    const targetCount = 36;
+    for(let i = 0; i < targetCount; i++){
+        nodes.push(images[i % images.length]);
+    }
+
+    // Fibonacci sphere positions
+    const golden = (1 + Math.sqrt(5)) / 2;
+    const positions = nodes.map((_, i) => {
+        const t = i / nodes.length;
+        const phi = Math.acos(1 - 2 * t);
+        const theta = (2 * Math.PI * i / golden) % (2 * Math.PI);
+        return { phi, theta };
+    });
+
+    // Rotation state
+    let rotX = 15 * Math.PI/180;
+    let rotY = 15 * Math.PI/180;
+    let velX = 0, velY = 0;
+    let dragging = false;
+    let lastX = 0, lastY = 0;
+
+    // Build DOM nodes
+    const els = nodes.map((img, i) => {
+        const el = document.createElement('div');
+        el.className = 'sphere-node';
+        const image = document.createElement('img');
+        image.src = img.src;
+        image.alt = img.alt;
+        image.loading = 'lazy';
+        el.appendChild(image);
+        el.addEventListener('click', () => openModal(img));
+        container.appendChild(el);
+        return el;
+    });
+
+    // Modal
+    const modal   = document.getElementById('sphereModal');
+    const modalImg = document.getElementById('sphereModalImg');
+    const modalCap = document.getElementById('sphereModalCaption');
+    const modalClose = document.getElementById('sphereModalClose');
+
+    function openModal(img){
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        modalCap.textContent = img.alt;
+        modal.classList.add('show');
+    }
+    modalClose.addEventListener('click', () => modal.classList.remove('show'));
+    modal.addEventListener('click', e => { if(e.target === modal) modal.classList.remove('show'); });
+    document.addEventListener('keydown', e => { if(e.key==='Escape') modal.classList.remove('show'); });
+
+    // Render loop
+    function render(){
+        const cx = SIZE / 2;
+        const cy = SIZE / 2;
+        const cosX = Math.cos(rotX), sinX = Math.sin(rotX);
+        const cosY = Math.cos(rotY), sinY = Math.sin(rotY);
+
+        const projected = positions.map((pos, i) => {
+            // Sphere to cartesian
+            let x = RADIUS * Math.sin(pos.phi) * Math.cos(pos.theta);
+            let y = RADIUS * Math.cos(pos.phi);
+            let z = RADIUS * Math.sin(pos.phi) * Math.sin(pos.theta);
+
+            // Rotate Y
+            const x1 = x * cosY + z * sinY;
+            const z1 = -x * sinY + z * cosY;
+            x = x1; z = z1;
+
+            // Rotate X
+            const y2 = y * cosX - z * sinX;
+            const z2 = y * sinX + z * cosX;
+            y = y2; z = z2;
+
+            const depth = (z + RADIUS) / (2 * RADIUS); // 0-1
+            const scale = 0.5 + depth * 0.6;
+            const opacity = z > -RADIUS * 0.3 ? Math.max(0, (z + RADIUS * 0.3) / (RADIUS * 1.3)) : 0;
+            const size = IMG_SIZE * scale;
+            const zIndex = Math.round(100 + z);
+
+            return { x, y, z, scale, opacity, size, zIndex, index: i };
+        });
+
+        // Sort back to front
+        projected.sort((a,b) => a.z - b.z);
+
+        projected.forEach(p => {
+            const el = els[p.index];
+            const left = cx + p.x - p.size/2;
+            const top  = cy + p.y - p.size/2;
+            el.style.width   = p.size + 'px';
+            el.style.height  = p.size + 'px';
+            el.style.left    = left + 'px';
+            el.style.top     = top  + 'px';
+            el.style.opacity = p.opacity;
+            el.style.zIndex  = p.zIndex;
+            el.style.display = p.opacity < 0.02 ? 'none' : 'block';
+        });
+    }
+
+    // Physics loop
+    function tick(){
+        if(!dragging){
+            rotY += AUTO_SPEED * Math.PI/180;
+            rotX += velX; rotY += velY;
+            velX *= MOMENTUM_DECAY; velY *= MOMENTUM_DECAY;
+        }
+        render();
+        requestAnimationFrame(tick);
+    }
+
+    // Drag events
+    container.addEventListener('mousedown', e => {
+        dragging = true; velX = 0; velY = 0;
+        lastX = e.clientX; lastY = e.clientY;
+        e.preventDefault();
+    });
+    document.addEventListener('mousemove', e => {
+        if(!dragging) return;
+        const dx = e.clientX - lastX;
+        const dy = e.clientY - lastY;
+        velY = dx * DRAG_SENSITIVITY * Math.PI/180;
+        velX = -dy * DRAG_SENSITIVITY * Math.PI/180;
+        rotX += velX; rotY += velY;
+        lastX = e.clientX; lastY = e.clientY;
+    });
+    document.addEventListener('mouseup', () => { dragging = false; });
+
+    // Touch events
+    container.addEventListener('touchstart', e => {
+        dragging = true; velX = 0; velY = 0;
+        lastX = e.touches[0].clientX; lastY = e.touches[0].clientY;
+        e.preventDefault();
+    }, { passive: false });
+    document.addEventListener('touchmove', e => {
+        if(!dragging) return;
+        const dx = e.touches[0].clientX - lastX;
+        const dy = e.touches[0].clientY - lastY;
+        velY = dx * DRAG_SENSITIVITY * Math.PI/180;
+        velX = -dy * DRAG_SENSITIVITY * Math.PI/180;
+        rotX += velX; rotY += velY;
+        lastX = e.touches[0].clientX; lastY = e.touches[0].clientY;
+    }, { passive: false });
+    document.addEventListener('touchend', () => { dragging = false; });
+
+    tick();
+})();
+
 });
