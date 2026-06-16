@@ -2451,3 +2451,176 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit;}
     .orbit-inner{ width:220px; height:220px; }
     .orbit-node{ width:56px; height:56px; border-radius:10px; }
 }
+
+/* ═══════════════════════════════════════
+   VIDEO GALLERY
+═══════════════════════════════════════ */
+.video-gallery-section{
+    background:var(--light);
+}
+[data-theme="dark"] .video-gallery-section{
+    background:#111;
+}
+
+.vg-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:1.5rem;
+    margin-top:2.5rem;
+}
+
+.vg-card{
+    position:relative;
+    border-radius:var(--radius);
+    overflow:hidden;
+    cursor:pointer;
+    background:#000;
+    box-shadow:var(--shadow-lg);
+}
+
+.vg-featured .vg-card{ height:480px; }
+.vg-side .vg-card{ height:480px; }
+
+.vg-thumb{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94), opacity 0.4s;
+    opacity:0.85;
+}
+.vg-card:hover .vg-thumb{
+    transform:scale(1.04);
+    opacity:0.6;
+}
+
+.vg-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:2rem;
+    transition:background 0.4s;
+}
+.vg-card:hover .vg-overlay{
+    background:linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.1) 100%);
+}
+
+.vg-play-btn{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0.85);
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    border:2px solid rgba(255,255,255,0.6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.6rem;
+    color:#fff;
+    opacity:0;
+    transition:opacity 0.3s, transform 0.3s, background 0.3s;
+    backdrop-filter:blur(4px);
+}
+.vg-card:hover .vg-play-btn{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1);
+}
+.vg-play-btn:hover{
+    background:rgba(244,180,0,0.4);
+    border-color:var(--accent);
+}
+
+.vg-info{ position:relative; z-index:1; }
+
+.vg-tag{
+    display:inline-block;
+    background:var(--accent);
+    color:#111;
+    font-size:0.65rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    padding:0.25rem 0.75rem;
+    border-radius:100px;
+    margin-bottom:0.75rem;
+}
+
+.vg-info h3{
+    color:#fff;
+    font-size:1.4rem;
+    font-weight:700;
+    margin:0 0 0.4rem;
+    line-height:1.2;
+}
+.vg-side .vg-info h3{ font-size:1.1rem; }
+
+.vg-info p{
+    color:rgba(255,255,255,0.75);
+    font-size:0.875rem;
+    margin:0;
+    line-height:1.5;
+}
+
+/* Modal */
+.vg-modal{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:rgba(0,0,0,0.95);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:1rem;
+}
+.vg-modal.open{ display:flex; }
+
+.vg-modal-inner{
+    position:relative;
+    width:100%;
+    max-width:900px;
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:0 40px 100px rgba(0,0,0,0.8);
+}
+
+.vg-modal-inner video{
+    width:100%;
+    max-height:80vh;
+    display:block;
+    background:#000;
+}
+
+.vg-modal-close{
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    z-index:10;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.3);
+    color:#fff;
+    font-size:1rem;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    backdrop-filter:blur(8px);
+    transition:background 0.2s;
+}
+.vg-modal-close:hover{ background:rgba(255,255,255,0.3); }
+
+@media(max-width:768px){
+    .vg-grid{ grid-template-columns:1fr; }
+    .vg-featured .vg-card,
+    .vg-side .vg-card{ height:260px; }
+    .vg-info h3{ font-size:1rem; }
+    .vg-play-btn{ width:56px; height:56px; font-size:1.2rem; opacity:1; transform:translate(-50%,-50%) scale(1); }
+}

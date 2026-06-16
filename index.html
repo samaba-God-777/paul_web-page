@@ -267,6 +267,58 @@
 </div>
 </section>
 
+<section id="video-gallery" class="section video-gallery-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Videos</span>
+      <h2 class="section-title">Galería de Videos</h2>
+      <p class="section-desc">Momentos capturados de nuestra campaña universitaria</p>
+    </div>
+
+    <div class="vg-grid">
+
+      <!-- Video principal (destacado) -->
+      <div class="vg-featured">
+        <div class="vg-card" data-src="video/video1.mp4">
+          <video class="vg-thumb" src="video/video1.mp4" muted loop playsinline preload="metadata"></video>
+          <div class="vg-overlay">
+            <div class="vg-play-btn"><span>&#9654;</span></div>
+            <div class="vg-info">
+              <span class="vg-tag">Destacado</span>
+              <h3>Plan de Gestión Universitaria</h3>
+              <p>Una visión transformadora para el CRU Darién 2026–2031</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Videos secundarios -->
+      <div class="vg-side">
+        <div class="vg-card" data-src="video/IMG_0775.MP4">
+          <video class="vg-thumb" src="video/IMG_0775.MP4" muted loop playsinline preload="metadata"></video>
+          <div class="vg-overlay">
+            <div class="vg-play-btn"><span>&#9654;</span></div>
+            <div class="vg-info">
+              <span class="vg-tag">Campaña</span>
+              <h3>Nuestro Equipo</h3>
+              <p>Comprometidos con el futuro del Darién</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal de video -->
+  <div id="videoModal" class="vg-modal">
+    <div class="vg-modal-inner">
+      <button class="vg-modal-close" id="vgModalClose">&#10005;</button>
+      <video id="vgModalVideo" controls autoplay playsinline></video>
+    </div>
+  </div>
+</section>
+
 <section class="photo-slider-section">
   <div class="slider-track" id="sliderTrack">
     <div class="slider-img"><img src="image/WhatsApp%20Image%202026-06-15%20at%2019.30.49.jpeg" alt="Foto 1" loading="lazy"></div>

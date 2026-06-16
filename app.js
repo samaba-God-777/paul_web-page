@@ -786,3 +786,35 @@ init();
 })();
 
 });
+
+/* ── VIDEO GALLERY ── */
+(function(){
+    const modal    = document.getElementById('videoModal');
+    const modalVid = document.getElementById('vgModalVideo');
+    const closeBtn = document.getElementById('vgModalClose');
+    if(!modal) return;
+
+    document.querySelectorAll('.vg-card').forEach(card => {
+        const thumb = card.querySelector('.vg-thumb');
+        card.addEventListener('mouseenter', () => { if(thumb) thumb.play().catch(()=>{}); });
+        card.addEventListener('mouseleave', () => { if(thumb){ thumb.pause(); thumb.currentTime=0; } });
+        card.addEventListener('click', () => {
+            const src = card.dataset.src;
+            if(!src) return;
+            modalVid.src = src;
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    function closeModal(){
+        modal.classList.remove('open');
+        modalVid.pause();
+        modalVid.src = '';
+        document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if(e.target === modal) closeModal(); });
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+})();
