@@ -1047,84 +1047,162 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit;}
 
 .lightbox-close:hover{color:var(--accent);}
 
+/* ── Testimonials – Card Stack Fan ────────────────────── */
 .testimonials-section{
     background:linear-gradient(135deg,#F7F7F7 0%,#FFFFFF 100%);
+    overflow:hidden;
 }
 
-.testimonials-carousel{
-    max-width:700px;
-    margin:0 auto;
+.cs-wrapper{ width:100%; user-select:none; }
+
+.cs-stage{
     position:relative;
-    min-height:250px;
+    width:100%;
+    height:420px;
+    perspective:1100px;
+    outline:none;
 }
 
-.testimonial-card{
+/* depth washes */
+.cs-stage::before,
+.cs-stage::after{
+    content:'';
+    pointer-events:none;
+    position:absolute;
+    border-radius:50%;
+}
+.cs-stage::before{
+    left:15%; right:15%; top:12px; height:120px;
+    background:rgba(0,0,0,0.03);
+    filter:blur(40px);
+}
+.cs-stage::after{
+    left:12%; right:12%; bottom:0; height:70px;
+    background:rgba(0,0,0,0.07);
+    filter:blur(28px);
+}
+
+/* individual card */
+.cs-card{
+    position:absolute;
+    bottom:24px;
+    left:50%;
+    width:500px;
+    height:300px;
+    margin-left:-250px;
+    border-radius:22px;
+    border:3px solid rgba(0,0,0,0.07);
     background:#FFFFFF;
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(0,0,0,0.08);
-    border-radius:var(--radius);
-    padding:40px;
-    text-align:center;
-    color:var(--primary);
-    display:none;
-    animation:fadeSlide 0.5s ease;
-    box-shadow:var(--shadow);
+    box-shadow:0 14px 44px rgba(0,0,0,0.11);
+    overflow:hidden;
+    cursor:pointer;
+    padding:30px 32px 26px;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    transition:transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94),
+               opacity 0.35s ease,
+               box-shadow 0.35s ease;
+    transform-origin:bottom center;
+    will-change:transform,opacity;
+}
+.cs-card.is-active{
+    cursor:grab;
+    box-shadow:0 22px 60px rgba(0,0,0,0.16);
+}
+.cs-card.is-active:active{ cursor:grabbing; }
+
+.cs-card-quote{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:3.8rem;
+    line-height:0.8;
+    color:var(--accent);
+    opacity:.55;
+    margin-bottom:6px;
+    flex-shrink:0;
 }
 
-.testimonial-card.active{display:block;}
-
-@keyframes fadeSlide{
-    0%{opacity:0;transform:translateX(30px);}
-    100%{opacity:1;transform:translateX(0);}
-}
-
-.testimonial-text{
-    font-size:1.15rem;
-    line-height:1.8;
+.cs-card-text{
+    font-size:.88rem;
+    line-height:1.7;
     font-style:italic;
-    margin-bottom:25px;
-    text-align:justify;
+    color:#333;
+    flex:1;
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-line-clamp:4;
+    -webkit-box-orient:vertical;
 }
 
-.testimonial-name{
-    font-size:1.2rem;
+.cs-card-author{
+    margin-top:14px;
+    padding-top:13px;
+    border-top:1px solid rgba(0,0,0,0.07);
+    flex-shrink:0;
+}
+.cs-card-name{
     font-weight:700;
+    font-size:.93rem;
     color:var(--accent);
 }
-
-.testimonial-role{
+.cs-card-role{
+    font-size:.76rem;
     color:var(--gray);
-    font-size:0.9rem;
-    margin-top:5px;
+    margin-top:3px;
+    line-height:1.4;
 }
 
-.carousel-controls{
+/* controls */
+.cs-controls{
     display:flex;
     align-items:center;
     justify-content:center;
     gap:20px;
-    margin-top:30px;
+    margin-top:22px;
 }
 
-.carousel-btn{
-    width:45px;height:45px;
+.cs-btn{
+    width:44px; height:44px;
     border-radius:50%;
     background:#FFFFFF;
-    border:1px solid rgba(0,0,0,0.08);
+    border:1px solid rgba(0,0,0,0.09);
     color:var(--primary);
-    font-size:1.2rem;
+    font-size:1.1rem;
+    cursor:pointer;
     transition:var(--transition);
-    box-shadow:var(--shadow);
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    display:flex;align-items:center;justify-content:center;
 }
+.cs-btn:hover{ background:var(--accent); color:#111; transform:scale(1.1); }
+.cs-btn:disabled{ opacity:.38; pointer-events:none; }
 
-.carousel-btn:hover{
-    background:var(--accent);
-    color:var(--primary);
-}
-
-.carousel-dots{
+.cs-dots{
     display:flex;
-    gap:10px;
+    gap:8px;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width:280px;
+}
+.cs-dot{
+    width:8px; height:8px;
+    border-radius:50%;
+    background:rgba(0,0,0,0.15);
+    cursor:pointer;
+    border:none;
+    transition:all .3s;
+    flex-shrink:0;
+}
+.cs-dot.active{
+    background:var(--accent);
+    transform:scale(1.35);
+}
+
+@media(max-width:768px){
+    .cs-stage{ height:380px; }
+    .cs-card{ width:290px; height:280px; margin-left:-145px; padding:22px 20px 18px; }
+    .cs-card-quote{ font-size:2.8rem; }
+    .cs-card-text{ font-size:.82rem; -webkit-line-clamp:5; }
 }
 
 .dot{

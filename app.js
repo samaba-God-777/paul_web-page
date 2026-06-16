@@ -350,35 +350,131 @@ async function init(){
     lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.classList.remove('show');});
     document.addEventListener('keydown',e=>{if(e.key==='Escape')lightbox.classList.remove('show');});
 
-    const carousel=document.getElementById('testimonialsCarousel');
-    const dotsContainer=document.getElementById('testimonialDots');
-    let currentSlide=0;
-    testimonials.forEach((t,i)=>{
-        carousel.innerHTML+=`
-            <div class="testimonial-card${i===0?' active':''}">
-                <p class="testimonial-text">"${t.text}"</p>
-                <div class="testimonial-name">${t.name}</div>
-                <div class="testimonial-role">${t.role}</div>
-            </div>`;
-        dotsContainer.innerHTML+=`<span class="dot${i===0?' active':''}" data-index="${i}"></span>`;
-    });
-    const dots=document.querySelectorAll('.dot');
-    const totalSlides=testimonials.length;
-    function goToSlide(index){
-        document.querySelectorAll('.testimonial-card').forEach((c,i)=>{
-            c.classList.toggle('active',i===index);
+    /* ── Card-Stack Fan Testimonials ─────────────────────── */
+    (function initCardStack(items){
+        const stage   = document.getElementById('csStage');
+        const dotsEl  = document.getElementById('csDots');
+        const btnPrev = document.getElementById('csPrev');
+        const btnNext = document.getElementById('csNext');
+        if(!stage || !items.length) return;
+
+        const LEN        = items.length;
+        const MAX_OFFSET = 3;          // cards visible each side
+        const SPREAD_DEG = 46;         // total fan angle
+        const STEP_DEG   = SPREAD_DEG / MAX_OFFSET;
+        const isMobile   = () => window.innerWidth < 769;
+        const SPACING    = () => isMobile() ? 150 : 260; // px between cards
+
+        let active = 0;
+        let dragStartX = null;
+        let autoTimer  = null;
+
+        /* helpers */
+        function wrap(n){ return ((n % LEN) + LEN) % LEN; }
+        function signedOffset(i, a){
+            const raw = i - a;
+            const alt = raw > 0 ? raw - LEN : raw + LEN;
+            return Math.abs(alt) < Math.abs(raw) ? alt : raw;
+        }
+
+        /* build DOM once */
+        const cards = items.map((t, i) => {
+            const el = document.createElement('div');
+            el.className = 'cs-card';
+            el.innerHTML = `
+                <div class="cs-card-quote">&#8220;</div>
+                <p class="cs-card-text">${t.text.replace(/\n/g,' ')}</p>
+                <div class="cs-card-author">
+                    <div class="cs-card-name">${t.name}</div>
+                    ${t.role ? `<div class="cs-card-role">${t.role.replace(/\n/g,' · ')}</div>` : ''}
+                </div>`;
+            el.addEventListener('click', () => { if(i !== active) goTo(i); });
+            stage.appendChild(el);
+
+            const dot = document.createElement('button');
+            dot.className = 'cs-dot';
+            dot.setAttribute('aria-label', `Ir al testimonio ${i+1}`);
+            dot.addEventListener('click', () => goTo(i));
+            dotsEl.appendChild(dot);
+
+            return { el, dot };
         });
-        dots.forEach((d,i)=>d.classList.toggle('active',i===index));
-        currentSlide=index;
-    }
-    document.getElementById('prevTestimonial').addEventListener('click',()=>{
-        goToSlide((currentSlide-1+totalSlides)%totalSlides);
-    });
-    document.getElementById('nextTestimonial').addEventListener('click',()=>{
-        goToSlide((currentSlide+1)%totalSlides);
-    });
-    dots.forEach(d=>d.addEventListener('click',()=>goToSlide(parseInt(d.dataset.index))));
-    setInterval(()=>goToSlide((currentSlide+1)%totalSlides),5000);
+
+        function applyPositions(){
+            const sp = SPACING();
+            cards.forEach(({ el, dot }, i) => {
+                const off  = signedOffset(i, active);
+                const abs  = Math.abs(off);
+                const visible = abs <= MAX_OFFSET;
+                const isAct   = off === 0;
+
+                /* hide far cards */
+                el.style.display  = visible ? '' : 'none';
+                if(!visible) return;
+
+                const rotZ  = off * STEP_DEG;
+                const tx    = off * sp;
+                const ty    = abs * 10 + (isAct ? -18 : 0);
+                const scale = isAct ? 1.04 : Math.max(0.86, 1 - abs * 0.05);
+                const zIdx  = 100 - abs;
+                const opacity = isAct ? 1 : Math.max(0.55, 1 - abs * 0.15);
+
+                el.style.zIndex   = zIdx;
+                el.style.opacity  = opacity;
+                el.style.transform =
+                    `translateX(${tx}px) translateY(${ty}px) rotateZ(${rotZ}deg) scale(${scale})`;
+                el.classList.toggle('is-active', isAct);
+                dot.classList.toggle('active', isAct);
+            });
+        }
+
+        function goTo(idx){
+            active = wrap(idx);
+            applyPositions();
+        }
+
+        /* button nav */
+        btnPrev.addEventListener('click', () => goTo(active - 1));
+        btnNext.addEventListener('click', () => goTo(active + 1));
+
+        /* keyboard nav */
+        stage.addEventListener('keydown', e => {
+            if(e.key === 'ArrowLeft')  goTo(active - 1);
+            if(e.key === 'ArrowRight') goTo(active + 1);
+        });
+
+        /* drag / swipe on active card */
+        stage.addEventListener('pointerdown', e => {
+            if(!e.target.closest('.cs-card.is-active')) return;
+            dragStartX = e.clientX;
+            stage.setPointerCapture(e.pointerId);
+        });
+        stage.addEventListener('pointerup', e => {
+            if(dragStartX === null) return;
+            const dx = e.clientX - dragStartX;
+            const threshold = isMobile() ? 60 : 100;
+            if(dx >  threshold) goTo(active - 1);
+            if(dx < -threshold) goTo(active + 1);
+            dragStartX = null;
+        });
+
+        /* auto-advance every 5 s */
+        function startAuto(){
+            autoTimer = setInterval(() => goTo(active + 1), 5000);
+        }
+        function stopAuto(){
+            clearInterval(autoTimer);
+        }
+        stage.addEventListener('mouseenter', stopAuto);
+        stage.addEventListener('mouseleave', startAuto);
+
+        applyPositions();
+        startAuto();
+
+        /* re-apply on resize (spacing changes on mobile) */
+        window.addEventListener('resize', applyPositions, { passive: true });
+
+    })(testimonials);
 
     const newsGrid=document.getElementById('newsGrid');
     const filters=document.querySelectorAll('.filter-btn');
