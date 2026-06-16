@@ -1,50 +1,62 @@
 [
   {
     "id": "vinculacion",
-    "title": "Universidad cerca de la gente",
+    "title": "Eje 1 – Vinculación con el Territorio",
     "icon": "🌱",
     "page": "pages/vinculacion.html",
     "items": [
-      "Apoyar a las comunidades",
-      "Investigar lo que necesita Darién",
-      "Practicantías desde el primer año",
-      "Trabajar junto a la comunidad"
+      "Programas permanentes de extensión",
+      "Semilleros de investigación",
+      "Prácticas profesionales con impacto social",
+      "10 convenios comunitarios activos"
     ]
   },
   {
     "id": "infraestructura",
-    "title": "Más y mejores espacios para estudiar",
+    "title": "Eje 2 – Infraestructura e Innovación",
     "icon": "🏗️",
     "page": "pages/infraestructura.html",
     "items": [
-      "Laboratorios modernos",
-      "Internet y tecnología en todas las aulas",
-      "Salones inteligentes y cómodos",
-      "Investigación para resolver problemas reales"
+      "Construcción y equipamiento de auditorio",
+      "Modernización de laboratorios",
+      "Biblioteca física y digital fortalecida",
+      "Mejoramiento de conectividad y TIC"
     ]
   },
   {
     "id": "movilidad",
-    "title": "Oportunidades dentro y fuera del país",
+    "title": "Eje 3 – Movilidad y Desarrollo Profesional",
     "icon": "🌍",
     "page": "pages/movilidad.html",
     "items": [
-      "Intercambios con otras universidades",
-      "Pasantías en el extranjero",
-      "Conexión con científicos de otros países",
-      "Cursos y diplomados para toda la vida"
+      "Pasantías nacionales e internacionales",
+      "Intercambios académicos",
+      "Capacitación continua docente",
+      "Redes académicas y científicas"
     ]
   },
   {
-    "id": "autogestion",
-    "title": "Alianzas que traen beneficios",
-    "icon": "🤝",
+    "id": "investigacion",
+    "title": "Eje 4 – Investigación Aplicada",
+    "icon": "🔬",
     "page": "pages/autogestion.html",
     "items": [
-      "Convenios con empresas e instituciones",
-      "Proyectos que generan recursos",
-      "Apoyo internacional para la universidad",
-      "Más oportunidades de trabajo para estudiantes"
+      "Al menos 10 proyectos de investigación",
+      "Gestión de fondos externos",
+      "Apoyo a publicaciones científicas",
+      "Revista institucional y repositorios"
+    ]
+  },
+  {
+    "id": "bienestar",
+    "title": "Eje 5 – Bienestar, Cultura y Deporte",
+    "icon": "🎭",
+    "page": "pages/vinculacion.html",
+    "items": [
+      "Ligas deportivas universitarias",
+      "Festivales culturales y artísticos",
+      "Atención psicológica y orientación",
+      "Programas de liderazgo estudiantil"
     ]
   }
 ]

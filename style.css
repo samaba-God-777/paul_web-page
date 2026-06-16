@@ -1558,6 +1558,140 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit;}
     box-shadow:0 8px 30px rgba(244,180,0,0.4);
 }
 
+/* ===== COMPROMISOS ===== */
+.compromisos-section{
+    background:#FFFFFF;
+}
+
+.compromisos-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-bottom:50px;
+}
+
+.compromiso-card{
+    background:#F7F7F7;
+    border-radius:var(--radius);
+    padding:35px 30px;
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+    border-top:4px solid var(--accent);
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.compromiso-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-lg);
+}
+
+.compromiso-header{
+    text-align:center;
+}
+
+.compromiso-icon{
+    font-size:2.8rem;
+    display:block;
+    margin-bottom:12px;
+}
+
+.compromiso-header h3{
+    font-size:1.5rem;
+    font-weight:800;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.compromiso-objetivo{
+    color:var(--gray);
+    font-size:0.95rem;
+    line-height:1.6;
+    font-style:italic;
+}
+
+.compromiso-list{
+    list-style:none;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    flex:1;
+}
+
+.compromiso-list li{
+    color:#444;
+    font-size:0.92rem;
+    line-height:1.6;
+    padding:10px 14px;
+    background:#FFFFFF;
+    border-radius:var(--radius-sm);
+    border-left:3px solid var(--accent);
+}
+
+.compromiso-list li strong{
+    color:var(--primary);
+    display:block;
+    margin-bottom:2px;
+}
+
+.compromiso-metas{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.compromiso-metas span{
+    font-size:0.85rem;
+    color:var(--gray);
+    font-weight:500;
+    padding:6px 12px;
+    background:#FFFFFF;
+    border-radius:50px;
+    border:1px solid rgba(0,0,0,0.08);
+}
+
+.compromiso-presentacion{
+    background:linear-gradient(135deg,#111111 0%,#333333 100%);
+    border-radius:var(--radius);
+    padding:50px 40px;
+    text-align:center;
+    color:#fff;
+    margin-top:20px;
+}
+
+.presentacion-icon{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.compromiso-presentacion h3{
+    font-size:1.8rem;
+    font-weight:800;
+    margin-bottom:20px;
+    color:#fff;
+}
+
+.compromiso-presentacion p{
+    color:rgba(255,255,255,0.85);
+    font-size:1.05rem;
+    line-height:1.8;
+    max-width:780px;
+    margin:0 auto 18px;
+}
+
+.compromiso-presentacion em{
+    color:var(--accent);
+    font-style:italic;
+}
+
+@media(max-width:768px){
+    .compromiso-presentacion{padding:35px 20px;}
+    .compromiso-presentacion h3{font-size:1.4rem;}
+}
+/* ===== END COMPROMISOS ===== */
+
 /* ===== AUTO SLIDER ===== */
 .photo-slider-section{
     background:#111111;
